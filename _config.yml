@@ -1,15 +1,14 @@
 # Site settings
-title: "Joon: Roon for Jekyll"
+title: "HaskellBR Blog"
 logo: logo.png # image from https://www.flickr.com/photos/lwr/5496279831/in/set-72157594159055823
-email: your-email@domain.com
+email: tacla.yamada@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Roon was an excellent service, with a beautiful understated design. Roon
-  was eventually acquired by Ghost, who awesomely chose to open source the theme.
-  <br/>This is my Jekyll port of the Roon theme
-url: "http://vormwald.github.io" # the base hostname & protocol for your site
-baseurl: "/joon" # the subpath of your site, e.g. /blog/
-twitter_username: jekyllrb
-github_username:  jekyll
+  O Blog da HaskellBR é um blog em português aberto para contribuições sobre a
+  linguagem de programação Haskell.
+url: "http://localhost:4000/" # the base hostname & protocol for your site
+# baseurl: # the subpath of your site, e.g. /blog/
+# twitter_username: haskellbr
+github_username:  haskellbr
 
 # Build settings
 markdown: kramdown

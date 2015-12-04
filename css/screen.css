@@ -1,12 +1,12 @@
 /* Link colour */
 a {
-    color: #d35c5c;
+    color: #7313A0;
 }
 
 /* Border at the top of the page */
 body>header,
 body.noimage {
-    border-color: #d35c5c;
+    border-color: #7313A0;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -102,7 +102,7 @@ body.serif article>menu #btn_comment span {
     color: #b168cd
 }
 .highlight .l {
-    color: #d35c5c
+    color: #7313A0
 }
 .highlight .n {
     color: #21272d
@@ -171,7 +171,7 @@ body.serif article>menu #btn_comment span {
     color: #46ad55
 }
 .highlight .m {
-    color: #d35c5c
+    color: #7313A0
 }
 .highlight .s {
     color: #46ad55
@@ -186,7 +186,7 @@ body.serif article>menu #btn_comment span {
     color: #deb328
 }
 .highlight .no {
-    color: #d35c5c
+    color: #7313A0
 }
 .highlight .nd {
     color: #51bac8
@@ -225,16 +225,16 @@ body.serif article>menu #btn_comment span {
     color: #4d4d4c
 }
 .highlight .mf {
-    color: #d35c5c
+    color: #7313A0
 }
 .highlight .mh {
-    color: #d35c5c
+    color: #7313A0
 }
 .highlight .mi {
-    color: #d35c5c
+    color: #7313A0
 }
 .highlight .mo {
-    color: #d35c5c
+    color: #7313A0
 }
 .highlight .sb {
     color: #46ad55
@@ -249,13 +249,13 @@ body.serif article>menu #btn_comment span {
     color: #46ad55
 }
 .highlight .se {
-    color: #d35c5c
+    color: #7313A0
 }
 .highlight .sh {
     color: #46ad55
 }
 .highlight .si {
-    color: #d35c5c
+    color: #7313A0
 }
 .highlight .sx {
     color: #46ad55
@@ -282,7 +282,7 @@ body.serif article>menu #btn_comment span {
     color: #c82829
 }
 .highlight .il {
-    color: #d35c5c
+    color: #7313A0
 }
 html, body {
     height: 100%;
@@ -1632,4 +1632,49 @@ body.touch.user article .readmore {
     body.noimage article {
         margin-top: 24px
     }
+}
+
+/* TODO - Rewrite this shit */
+/* added styles */
+
+input {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  border: solid 1px #ccc;
+  *display: inline;
+  padding: 20px 30px;
+  margin: 0;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  font-size: 16px;
+  -ms-border-radius: 50px;
+  outline: none;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+input:active {
+  outline: none;
+}
+
+input + button {
+  background-color: #7313A0;
+  border: solid 1px #ccc;
+  border-radius: 50px;
+  color: white;
+  padding: 20px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.after-signup {
+  display: none;
 }
