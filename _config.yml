@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
   O Blog da HaskellBR é um blog em português aberto para contribuições sobre a
   linguagem de programação Haskell.
 url: "https://haskellbr.github.io" # the base hostname & protocol for your site
-baseurl: /blog # the subpath of your site, e.g. /blog/
+#baseurl: /blog # the subpath of your site, e.g. /blog/
 # twitter_username: haskellbr
 github_username:  haskellbr
 
