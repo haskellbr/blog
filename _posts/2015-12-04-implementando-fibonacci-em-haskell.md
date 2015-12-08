@@ -191,8 +191,8 @@ se escreve:
 let x = soma10 200
 {% endhighlight %}
 O nome `x` se refere a computação `soma10 200` e não seu resultado. Quando
-precisamos que do valor (seja para imprimir no console ou mandar como uma
-resposta HTTP) é que ele e todas os valores dos quais depende são computados.
+precisamos do valor (seja para imprimir no console ou mandar como uma
+resposta HTTP) é que ele e todos os valores dos quais depende são computados.
 
 Algo parecido agora faz parte da popular biblioteca `lodash` para o JavaScript.
 Quando chamo:
