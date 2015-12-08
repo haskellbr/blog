@@ -5,6 +5,7 @@ Site Jekyll por trás de [blog.haskellbr.com](http://blog.haskellbr.com).
 * Crie um fork
 * [Instale as dependências](#instalando-as-dependencias)
 * [Rode o servidor](#comecando-o-servidor-com-livereload)
+* Rode `jekyll post "Título"`
 * Escreva algo legal
 * Mande um PR
 
