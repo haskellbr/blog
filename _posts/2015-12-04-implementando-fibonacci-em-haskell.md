@@ -102,10 +102,11 @@ elevaAoQuadrado 10 -- => 100
 ##### Paralelo com a biblioteca `lodash`
 A biblioteca `lodash` tem uma série de funções com equivalentes no Haskell.
 Algumas que valem a pena mencionar:
-- `_.head` / `_.first` equivale a `head`
-- `_.tail` / `_.rest` equivale a `tail`
-- `_.map` equivale a `map`
-- `_.reduce` equivale a `foldl`
+
+* `_.head` / `_.first` equivale a `head`
+* `_.tail` / `_.rest` equivale a `tail`
+* `_.map` equivale a `map`
+* `_.reduce` equivale a `foldl`
 
 - - -
 
