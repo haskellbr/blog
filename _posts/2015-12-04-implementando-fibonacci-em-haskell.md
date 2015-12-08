@@ -355,29 +355,29 @@ aceitos no repositório do GitHub:
 [https://github.com/haskellbr/blog](https://github.com/haskellbr/blog). No
 momento a meta é ter conteúdo publicado semanalmente.
 
-Caso te interesse receber e-mails semanais com o estado da União de Haskell no
-Brasil, assine aqui:
-<form class="js-digest-signup" style="height: 61px; text-align: center;">
-  <div class="after-signup" style="top: 17px; position: relative; font-weight: bold;">
-    Parabéns! Entraremos em contato!
-  </div>
-  <div class="before-signup">
-    <input placeholder="fulano@exemplo.com" name="email" type="email"></input>
-    <button class="btn" type="submit">Assinar</button>
-  </div>
-</form>
+<!--Caso te interesse receber e-mails semanais com o estado da União de Haskell no-->
+<!--Brasil, assine aqui:-->
+<!--<form class="js-digest-signup" style="height: 61px; text-align: center;">-->
+  <!--<div class="after-signup" style="top: 17px; position: relative; font-weight: bold;">-->
+    <!--Parabéns! Entraremos em contato!-->
+  <!--</div>-->
+  <!--<div class="before-signup">-->
+    <!--<input placeholder="fulano@exemplo.com" name="email" type="email"></input>-->
+    <!--<button class="btn" type="submit">Assinar</button>-->
+  <!--</div>-->
+<!--</form>-->
 
-<script>
-$(function() {
-  var $form = $('.js-digest-signup');
-  $form.on('submit', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $('.before-signup').fadeOut(function() {
-      $('.after-signup').fadeIn()
-    })
-    var email = $form.find('input').val();
-    console.log(email);
-  });
-});
-</script>
+<!--<script>-->
+<!--$(function() {-->
+  <!--var $form = $('.js-digest-signup');-->
+  <!--$form.on('submit', function(e) {-->
+    <!--e.preventDefault();-->
+    <!--e.stopPropagation();-->
+    <!--$('.before-signup').fadeOut(function() {-->
+      <!--$('.after-signup').fadeIn()-->
+    <!--})-->
+    <!--var email = $form.find('input').val();-->
+    <!--console.log(email);-->
+  <!--});-->
+<!--});-->
+<!--</script>-->
