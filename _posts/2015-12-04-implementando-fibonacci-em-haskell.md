@@ -225,7 +225,6 @@ E porque a linguagem é lazy, podemos bem fazer:
 {% highlight haskell %}
 [0..]
 -- => [0, 1, 2, 3, 4, 5, 6, ...]
-variável
 {% endhighlight %}
 
 Se tentarmos imprimir isso, o programa não acaba nunca de escrever números na
