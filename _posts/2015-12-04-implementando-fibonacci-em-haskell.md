@@ -24,11 +24,13 @@ de loops e variáveis é contornável de duas formas:
   concorrente ou para ter uma performance maior
 
 #### Operando com números
+Em JavaScript:
 {% highlight javascript %}
 // "//" é um comentário
 1 + 10 // => 11
 2 * 3  // => 6
 {% endhighlight %}
+Em Haskell:
 {% highlight haskell %}
 -- "--" é um comentário
 1 + 10 -- => 11
@@ -38,12 +40,14 @@ de loops e variáveis é contornável de duas formas:
 - - -
 
 #### Operando com listas
+Em JavaScript:
 {% highlight javascript %}
 [1, 2, 3, 4] // => [1, 2, 3, 4]
 [1, 2]       // => [1, 2]
 [1, 2][0]    // => 1
 [1, 2][1]    // => 2
 {% endhighlight %}
+Em Haskell:
 {% highlight haskell %}
 [1, 2, 3, 4] -- => [1, 2, 3, 4]
 [1, 2]       -- => [1, 2]
@@ -57,6 +61,7 @@ de loops e variáveis é contornável de duas formas:
 - - -
 
 #### Condicionais
+Em JavaScript:
 {% highlight javascript %}
 if(something) {
   // ...
@@ -66,6 +71,7 @@ if(something) {
   // ...
 }
 {% endhighlight %}
+Em Haskell:
 {% highlight haskell %}
 if something
     then -- ...
@@ -78,20 +84,24 @@ if something
 - - -
 
 #### Definindo funções
+Em JavaScript:
 {% highlight javascript %}
 function soma10(numero) { return numero + 10 }
 function elevaAoQuadrado(numero) { return numero * numero }
 {% endhighlight %}
+Em Haskell:
 {% highlight haskell %}
 soma10 numero = numero + 10
 elevaAoQuadrado numero = numero * numero
 {% endhighlight %}
 
 #### Usando funções
+Em JavaScript:
 {% highlight javascript %}
 soma10(2)           // => 12
 elevaAoQuadrado(10) // => 100
 {% endhighlight %}
+Em Haskell:
 {% highlight haskell %}
 soma10 2           -- => 12
 elevaAoQuadrado 10 -- => 100
