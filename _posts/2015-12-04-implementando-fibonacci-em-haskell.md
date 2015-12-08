@@ -290,15 +290,13 @@ fibs -- => 0, 1, 1, 2, 3, 5, ...
 {% endhighlight %}
 
 E se pensarmos em todos os elementos menos o primeiro de `fibs`; o resultado de
-`tail fibs` ou `resto(fibs)` se estivessemos escrevendo JavaScript e se JavaScript
-também fosse uma linguagem deboa (preguiçosa):
+`tail fibs`:
 {% highlight haskell %}
 fibs      -- => 0, 1, 1, 2, 3, 5, ...
 tail fibs -- => 1, 1, 2, 3, 5, 8, ...
 {% endhighlight %}
 
-Não sei se é fácil de enxergar isso, mas `tail (tail fibs)` ou o
-`resto(resto(fibs))` é:
+Não sei se é fácil de enxergar isso, mas `tail (tail fibs)` é:
 {% highlight haskell %}
 fibs             -- =>  0     ,  1     ,  1     ,  2     ,  3     ,  5     , ...
 tail fibs        -- =>      1 ,      1 ,      2 ,      3 ,      5 ,      8 , ...
