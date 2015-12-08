@@ -80,7 +80,7 @@ if something
 #### Definindo funções
 {% highlight javascript %}
 function soma10(numero) { return numero + 10 }
-funciton elevaAoQuadrado(numero) { return numero * numero }
+function elevaAoQuadrado(numero) { return numero * numero }
 {% endhighlight %}
 {% highlight haskell %}
 soma10 numero = numero + 10
@@ -310,13 +310,12 @@ A lista `fibs` é definida como `0 : 1 : (somaDasListas fibs (tail fibs))`! Noss
 `restoDeFibs` é igual a `somaDasListas fibs (tail fibs)`.
 
 O que nos leva a função `somaDasListas`. Para todos os elementos na lista 1,
-soma o mesmo elemento da lista 2. Não vou entrar em detalhes aqui. A
-implementação clássica usa a função `zipWith` que tem um equivalente no `lodash`
-`_.zipWith`. Vamos precisar de outra função chamada `null` que retorna `true` se
-a lista estiver vazia. A ideia é dada uma função `fn`, uma `lista1` e uma
-`lista2` aplicamos `fn elementoDaLista1 elementoDaLista2` para todos os
-elementos das listas (supondo que tenham o mesmo tamanho) e retornamos uma lista
-com os resultados. Então:
+soma o mesmo elemento da lista 2. A implementação clássica usa a função
+`zipWith` que tem um equivalente no `lodash` `_.zipWith`. Vamos precisar de
+outra função chamada `null` que retorna `true` se a lista estiver vazia. A ideia
+é dada uma função `fn`, uma `lista1` e uma `lista2` aplicamos `fn
+elementoDaLista1 elementoDaLista2` para todos os elementos das listas (supondo
+que tenham o mesmo tamanho) e retornamos uma lista com os resultados. Então:
 
 {% highlight haskell %}
 zipWith fn lista1 lista2 =
