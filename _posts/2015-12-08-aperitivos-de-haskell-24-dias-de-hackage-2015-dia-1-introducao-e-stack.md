@@ -80,8 +80,8 @@ Haskell e estão interessados em um recomeço com ferramentas melhores).
 
 Quando eu comecei o [Pittsburgh Haskell](http://pittsburghhaskell.org/) em
 Fevereiro desse ano (2015), eu encontrei uma dificuldade enorme: ajudar
-recem-chegados ao Haskell a começar. Eu criei uma sessão de workshop introdutória,
-mas uma quantidade enorme de pessoas me desencorajaram pela minha melhor
+recem-chegados a Haskell a começar. Eu criei uma sessão de workshop introdutória,
+mas uma quantidade enorme de pessoas se desencorajaram pela minha melhor
 tentativa de criar um agora [obsoleto guia de instalação para Haskell](https://github.com/pittsburgh-haskell/haskell-installation)
 que funcionaria no OSX, Windows e Linux, e as pessoas tiveram problemas
 instalando as ferramentas básicas, e problemas de versão se já tivessem uma
@@ -205,7 +205,7 @@ Ok, modules loaded: Lib, Main.
 {% endhighlight %}
 
 In `src/Lib.hs` no projeto de exemplo, nós temos um módulo besta ilustrando um
-pouco os comentários da documentação [Haddock](https://www.haskell.org/haddock/):
+pouco os comentários de documentação [Haddock](https://www.haskell.org/haddock/):
 
 {% highlight haskell %}
 -- | A library to do stuff.
