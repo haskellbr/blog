@@ -47,7 +47,7 @@ Como escolher o quê cobrir? Eu gosto do que Ollie escreveu em seu
 [post inaugural de 2012](https://ocharles.org.uk/blog/posts/2012-12-01-24-days-of-hackage.html):
 
 > Esse será um tour turbulento de alguns módulos que eu uso em uma base (quase)
-> diária, incluindo módulos que me inspiraram, módulos que mudar a forma como
+> diária, incluindo módulos que me inspiraram, módulos que mudam a forma como
 > penso sobre código, e alguns módulos que são tão incríveis que eu não sou
 > inteligente o suficiente para os usar!
 
@@ -66,7 +66,7 @@ o [GHC](https://www.haskell.org/ghc/) 7.10.
 
 Stack é um _game changer_ para a comunidade Haskell. É uma solução _all-in-one_
 para criar projetos Haskell, manejar dependências, compilar e mais. Desde que o
-Stack foi publicado, eu tenho lentamente migrado projetos antigos para o usar, e
+Stack foi publicado, eu tenho lentamente migrado projetos antigos para o usa-lo, e
 eu uso o Stack para todos os novos projetos, incluindo o [repositório para essa série](https://github.com/FranklinChen/twenty-four-days2015-of-hackage)
 
 Eu não vou dar um tutorial completo no Stack aqui hoje, só um gostinho, e você
@@ -80,9 +80,9 @@ Haskell e estão interessados em um recomeço com ferramentas melhores).
 
 Quando eu comecei o [Pittsburgh Haskell](http://pittsburghhaskell.org/) em
 Fevereiro desse ano (2015), eu encontrei uma dificuldade enorme: ajudar
-recem-chegados a Haskell começar. Eu criei uma sessão de workshop introdutória,
-mas uma quantidade enorme de pessoas de desencorajaram pela minha melhor
-tentativa de criar [um agora obsoleto guia de instalação para Haskell](https://github.com/pittsburgh-haskell/haskell-installation)
+recem-chegados ao Haskell a começar. Eu criei uma sessão de workshop introdutória,
+mas uma quantidade enorme de pessoas me desencorajaram pela minha melhor
+tentativa de criar um agora [obsoleto guia de instalação para Haskell](https://github.com/pittsburgh-haskell/haskell-installation)
 que funcionaria no OSX, Windows e Linux, e as pessoas tiveram problemas
 instalando as ferramentas básicas, e problemas de versão se já tivessem uma
 versão antiga do GHC instalada. Muito tempo foi desperdiçado em tentar ajudar as
@@ -134,8 +134,7 @@ $ stack new stack-template-demo /path/on/my/computer/to/franklinchen.hsfiles
 onde `franklinchen.hsfiles` é o meu template (leia abaixo sobre como criar seu
 próprio template).
 
-(Eu botei uma instância do projeto gerado no ar [no GitHub](https://github.com/FranklinChen/stack-template-demo)
-se você quer olhar na estrutura sem ter que instalar e rodar o Stack agora.)
+(Eu botei uma instância do projeto gerado [no GitHub](https://github.com/FranklinChen/stack-template-demo), caso você queira olhar na estrutura sem ter que instalar e rodar o Stack agora.)
 
 ### Começando com o novo projeto gerado
 
@@ -196,7 +195,7 @@ elas. As dependências acabam instaladas e botadas em um _cache_ para que *outro
 projetos* no futuro possam as usar de novo. Essa é uma vantagem enorme do Stack
 versus os dias antes do Stack, onde nós sempre tínhamos o problema de re-baixar
 e re-compilar as mesmas bibliotecas para projetos diferentes; isso era um
-desperdício de tempo e espaço enorme! Stack decide inteligentemente o que pode
+desperdício enorme de tempo e espaço! Stack decide inteligentemente o que pode
 ou não ser dividido consistentemente.
 
 Stack executa um REPL GHCi com nossos módulos carregados:
@@ -206,7 +205,7 @@ Ok, modules loaded: Lib, Main.
 {% endhighlight %}
 
 In `src/Lib.hs` no projeto de exemplo, nós temos um módulo besta ilustrando um
-pouco de comentários de documentação [Haddock](https://www.haskell.org/haddock/):
+pouco os comentários da documentação [Haddock](https://www.haskell.org/haddock/):
 
 {% highlight haskell %}
 -- | A library to do stuff.
@@ -306,7 +305,7 @@ $ stack-template-demo
 
 ### Sua própria configuração para templates do Stack
 Ao usar templates do Stack, é útil adicionar sua informação para a configuração
-global, para que ela seja inserida automáticamente quando você gerar projetos
+global, para que ela seja inserida automaticamente quando você gerar projetos
 novos. A documentação para a configuração está [aqui](http://docs.haskellstack.org/en/stable/yaml_configuration.html).
 Crie um arquivo em `~/.stack/config.yaml`. O meu tem:
 
