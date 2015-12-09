@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Implementando fibonacci em Haskell
+author: Pedro Tacla Yamada
+author_url: "https://github.com/yamadapc"
 ---
 A mágica da avaliação não estrita e funções de alta ordem. Um crash course de 5
 minutos em Haskell e a descontrução da implementação de fibonacci clássica em

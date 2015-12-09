@@ -9,15 +9,6 @@ body_class: "home-template user"
     <div class="home">
       {% for post in site.posts %}
       <article class="{%comment%}post_class{%endcomment%}">
-
-          <!--{% if post.image %}-->
-              <!--<div class="image-holder show">-->
-                <!--<a href="{{ post.url | prepend: site.baseurl }}" class="inner" style="background-image: url('{{ site.baseurl }}/content/images/{{ post.image }}');">-->
-                  <!--<img src="{{ site.baseurl }}/content/images/{{ post.image }}">-->
-              <!--</a>-->
-            <!--</div>-->
-          <!--{% endif %}-->
-
           <div class="meta">
             <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
               <a href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%B %-d, %Y" }}</a>
@@ -26,6 +17,24 @@ body_class: "home-template user"
 
           <header>
               <h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+
+              {% if post.author %}
+              <h2 class="author-name" style="color: #aaa; font-size: 20px; margin-top: 15px;">
+                {% if post.author_url %}
+                <style>
+                 h2.author-name a:hover {
+                   text-decoration: underline;
+                 }
+                </style>
+                <a style="color: #aaa;" href="{{post.author_url}}">
+                  {% endif %}
+                  {{ post.author }}
+                  {% if post.author_url %}
+                </a>
+                {% endif %}
+              </h2>
+              {% endif %}
+
           </header>
 
           <div class="text">

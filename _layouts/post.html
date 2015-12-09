@@ -17,6 +17,39 @@ body_class: post-template
         <span class="count" id="js-reading-time">&nbsp;</span>
       </div>
       <h1>{{ page.title }}</h1>
+      {% if page.author %}
+        <h2 class="author-name" style="color: #aaa; font-size: 20px; margin-top: 20px;">
+          {% if page.author_url %}
+            <style>
+             h2.author-name a:hover {
+               text-decoration: underline;
+             }
+            </style>
+            <a style="color: #aaa;" href="{{page.author_url}}">
+          {% endif %}
+            por {{ page.author }}
+          {% if page.author_url %}
+            </a>
+          {% endif %}
+        </h2>
+      {% endif %}
+
+      {% if page.translator %}
+        <h2 class="translator-name" style="color: #aaa; font-size: 20px; margin-top: 10px;">
+          {% if page.translator_url %}
+            <style>
+             h2.translator-name a:hover {
+               text-decoration: underline;
+             }
+            </style>
+            <a style="color: #aaa;" href="{{page.translator_url}}">
+          {% endif %}
+            traduzido por {{ page.translator }}
+          {% if page.translator_url %}
+            </a>
+          {% endif %}
+        </h2>
+      {% endif %}
     </header>
 
     <div class="text" id="js-post-content">

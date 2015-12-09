@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Aperitivos de Haskell - 24 dias de Hackage, 2015 - dia 1 - Introdução e Stack
-author: Kranklin Chen
+author: Franklin Chen
+author_url: "http://conscientiousprogrammer.com/"
 translator: Pedro Yamada
+translator_url: "https://github.com/yamadapc"
 ---
 _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
 [Ler original](http://conscientiousprogrammer.com/blog/2015/11/30/haskell-tidbits-24-days-of-hackage-2015-day-1-introduction-and-stack/)_
