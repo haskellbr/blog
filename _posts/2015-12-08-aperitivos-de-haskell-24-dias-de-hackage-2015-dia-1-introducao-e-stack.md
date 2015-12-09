@@ -20,8 +20,6 @@ _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
 - - -
 
 
-## Day 1
-
 # Dia 1
 Alguns dias atrás, eu me deparei com [um tweet do Ollie Charles](https://twitter.com/acid2/status/669882628695281669)
 sobre como ele não teve tempo de fazer seus posts de usuais em dezembro "24
