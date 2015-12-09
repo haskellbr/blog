@@ -24,11 +24,13 @@ de loops e variáveis é contornável de duas formas:
   concorrente ou para ter uma performance maior
 
 #### Operando com números
+Em JavaScript:
 {% highlight javascript %}
 // "//" é um comentário
 1 + 10 // => 11
 2 * 3  // => 6
 {% endhighlight %}
+Em Haskell:
 {% highlight haskell %}
 -- "--" é um comentário
 1 + 10 -- => 11
@@ -38,12 +40,14 @@ de loops e variáveis é contornável de duas formas:
 - - -
 
 #### Operando com listas
+Em JavaScript:
 {% highlight javascript %}
 [1, 2, 3, 4] // => [1, 2, 3, 4]
 [1, 2]       // => [1, 2]
 [1, 2][0]    // => 1
 [1, 2][1]    // => 2
 {% endhighlight %}
+Em Haskell:
 {% highlight haskell %}
 [1, 2, 3, 4] -- => [1, 2, 3, 4]
 [1, 2]       -- => [1, 2]
@@ -57,6 +61,7 @@ de loops e variáveis é contornável de duas formas:
 - - -
 
 #### Condicionais
+Em JavaScript:
 {% highlight javascript %}
 if(something) {
   // ...
@@ -66,6 +71,7 @@ if(something) {
   // ...
 }
 {% endhighlight %}
+Em Haskell:
 {% highlight haskell %}
 if something
     then -- ...
@@ -78,20 +84,24 @@ if something
 - - -
 
 #### Definindo funções
+Em JavaScript:
 {% highlight javascript %}
 function soma10(numero) { return numero + 10 }
 function elevaAoQuadrado(numero) { return numero * numero }
 {% endhighlight %}
+Em Haskell:
 {% highlight haskell %}
 soma10 numero = numero + 10
 elevaAoQuadrado numero = numero * numero
 {% endhighlight %}
 
 #### Usando funções
+Em JavaScript:
 {% highlight javascript %}
 soma10(2)           // => 12
 elevaAoQuadrado(10) // => 100
 {% endhighlight %}
+Em Haskell:
 {% highlight haskell %}
 soma10 2           -- => 12
 elevaAoQuadrado 10 -- => 100
@@ -102,10 +112,11 @@ elevaAoQuadrado 10 -- => 100
 ##### Paralelo com a biblioteca `lodash`
 A biblioteca `lodash` tem uma série de funções com equivalentes no Haskell.
 Algumas que valem a pena mencionar:
-- `_.head` / `_.first` equivale a `head`
-- `_.tail` / `_.rest` equivale a `tail`
-- `_.map` equivale a `map`
-- `_.reduce` equivale a `foldl`
+
+* `_.head` / `_.first` equivale a `head`
+* `_.tail` / `_.rest` equivale a `tail`
+* `_.map` equivale a `map`
+* `_.reduce` equivale a `foldl`
 
 - - -
 
@@ -191,8 +202,8 @@ se escreve:
 let x = soma10 200
 {% endhighlight %}
 O nome `x` se refere a computação `soma10 200` e não seu resultado. Quando
-precisamos que do valor (seja para imprimir no console ou mandar como uma
-resposta HTTP) é que ele e todas os valores dos quais depende são computados.
+precisamos do valor (seja para imprimir no console ou mandar como uma
+resposta HTTP) é que ele e todos os valores dos quais depende são computados.
 
 Algo parecido agora faz parte da popular biblioteca `lodash` para o JavaScript.
 Quando chamo:
@@ -225,7 +236,6 @@ E porque a linguagem é lazy, podemos bem fazer:
 {% highlight haskell %}
 [0..]
 -- => [0, 1, 2, 3, 4, 5, 6, ...]
-variável
 {% endhighlight %}
 
 Se tentarmos imprimir isso, o programa não acaba nunca de escrever números na

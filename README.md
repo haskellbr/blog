@@ -1,33 +1,37 @@
-# Joon: Roon theme for Jekyll
+# blog.haskellbr.com
+Site Jekyll por trás de [blog.haskellbr.com](http://blog.haskellbr.com).
 
-Jekyll theme based on the Roon for [Ghost](http://github.com/tryghost/roon/).
+## Enviando seu post
+* Crie um fork
+* [Instale as dependências](#instalando-as-dependencias)
+* [Rode o servidor](#comecando-o-servidor-com-livereload)
+* Rode `jekyll post "Título"`
+* Escreva algo legal
+* Mande um PR
 
-## Demo
-View this jekyll theme in action [here](https://vormwald.github.io/joon)
+_NOTA:_ Vale a pena discutir o que vai escrever antes de começar. Veja se não
+há ninguém online no [IRC](http://irc.lc/freenode/haskell-br) ou no
+[Slack](http://haskellbr.com/slack/).
 
-## Screenshot
-![screenshot](https://raw.githubusercontent.com/vormwald/joon/master/screenshot.png)
+## Instalando as dependências
+Tendo `ruby` e `bundler` instalados:
+```
+$ bundle install
+```
 
-## Font Options
+## Começando o servidor
+```
+$ jekyll serve
+```
 
-This theme comes with two font options; a serif and sans-serif (the default). 
-Switching between them is done in the HTML, by adding `serif` to the `class` of 
-the `<body>` element in [head.html](https://github.com/vormwald/joon/blob/master/_layouts/default.html.hbs#L6).
+## Começando o servidor com livereload
+```
+$ guard
+# O servidor e o livereload vão começar
+```
 
-## Colour Options
-
-This theme uses an accent colour for links and the border at the top of pages.
-
-To change this colour, you need to edit [assets/css/screen.css](https://github.com/vormwald/joon/blob/master/assets/css/screen.css).
-
-There are only two values you need to change, conveniently **located at the very
-top of the file**.
-
-## For More Information
-For more on Jekyll, read the [documentation](http://jekyllrb.com/)
-
+Instale a extensão [livereload](http://livereload.com/) no seu browser e visite
+http://localhost:4000.
 
 ## Copyright & License
-
-Roon is Copyright (c) 2013-2015 Sam Soffes & Ghost Foundation - Released under 
-the [MIT license](LICENSE).
+Todo o código e posts são distribuidos sob a [licensa MIT](LICENSE).
