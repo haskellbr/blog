@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Aperitivos de Haskell - 24 dias de Hackage, 2015 - dia 1 - Introdução e Stack
+author: Kranklin Chen
+translator: Pedro Yamada
 ---
 _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
 [Ler original](http://conscientiousprogrammer.com/blog/2015/11/30/haskell-tidbits-24-days-of-hackage-2015-day-1-introduction-and-stack/)_
@@ -30,11 +32,11 @@ obter pelo arquivo comunitário **Hackage** e, em 2014, ele cobriu extensões da
 linguagem no GHC.
 
 Com alguma trepidação, decidi que eu faria uma série "24 dias de Hackage" para
-terminar o ano, para dividir uma seleção do enorme número de pacotes de Haskell
-que eu acho úteis. Eu achei que seria particularmente apropriado fazer isso
-dado que 2015 foi o ano em que eu migrei para **usar Haskell como minha
-linguagem principal** na maior parte do meu trabalho recente e projetos
-pessoais e, assim, esse foi um ano de descobertas consideráveis para mim.
+terminar o ano dividindo uma seleção do enorme número de pacotes de Haskell que
+acho úteis. Eu achei que seria particularmente apropriado fazer isso dado que
+2015 foi o ano em que eu migrei para **usar Haskell como minha linguagem
+principal** na maior parte do meu trabalho recente e projetos pessoais e,
+assim, esse foi um ano de descobertas consideráveis para mim.
 
 ## Todo o código
 Todo o código para a série estará [nesse repositório do GitHub](https://github.com/FranklinChen/twenty-four-days2015-of-hackage).
