@@ -418,7 +418,7 @@ ser instalada antes de rodar o script)
 _[N.T. Algo parecido é feito no meu projeto
 [`stack-run-auto`](https://github.com/yamadapc/stack-run-auto) com a adição de
 não termos de especificar os pacotes ou a distribuição - eles são detectados
-automáticamente]_
+automaticamente]_
 
 Se você tem programas curtos que não precisam ser organizados em pacotes do
 Cabal completos, você pode tratar Haskell como uma "linguagem de scripting" e
