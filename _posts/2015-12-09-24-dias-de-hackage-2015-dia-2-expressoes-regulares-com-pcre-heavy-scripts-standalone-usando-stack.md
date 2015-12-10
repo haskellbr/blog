@@ -20,13 +20,13 @@ Perl (entre meados de 1999 e 2010). Havia uma série de razões para isso; uma
 delas era que Perl fazia processamento de texto usando expressões regulares ser
 muito fácil.
 
-Se você é um Haskeller experiente, você deve estar pensando "Por que não usar um
-parser de verdade?", como o venerável
-[parsec](https://hackage.haskell.org/package/parsec), coberto em um [dia de
-Hackage de 2012](https://ocharles.org.uk/blog/posts/2012-12-10-24-days-of-hackage-parsec.html).
+Se você é um Haskeller experiente, você pode estar pensando "Por que não usar um
+parser de verdade?", algo usando o venerável
+[parsec](https://hackage.haskell.org/package/parsec), coberto em um
+[dia de Hackage de 2012](https://ocharles.org.uk/blog/posts/2012-12-10-24-days-of-hackage-parsec.html).
 
-(Ou, hoje, várias outras bibliotecas alternativas para parsing poderiam ser
-consideradas. Um outro post dirá mais sobre isso!)
+(Hoje, várias outras bibliotecas alternativas para parsing poderiam ser
+consideradas. Outro post dirá mais sobre isso!)
 
 Afinal, como Jamie Zawinski escreveu:
 
@@ -36,10 +36,10 @@ Afinal, como Jamie Zawinski escreveu:
 Eu até dei uma palestra no [Pittsburgh Tech Fest](http://pghtechfest.com/) em
 2013, ["Stop overusing regular
 expressions!"](http://www.slideshare.net/FranklinChen/handout-22302440) _["Pare
-de abusar de expressões regulares!"]_, na qual eu promovi escrever parsers ao
+de abusar de expressões regulares!"]_, na qual eu promovi escrevermos parsers ao
 invés de regexes.
 
-Ainda assim, às vezes, eu quero usar uma expressão regular. Nesse caso, eu tenho
+Ainda assim, às vezes eu quero usar uma expressão regular. Nesse caso, eu tenho
 usado um pacote obscuro porém útil: [`pcre-heavy`](https://hackage.haskell.org/package/pcre-heavy).
 
 Hoje vou mostrar como usar o `pcre-heavy`, ao mesmo tempo que mostro como
@@ -242,8 +242,8 @@ Just ("@Media:\tfoo, audio, unlinked",["foo","audio",", unlinked"])
 
 Finalmente, o que nós queríamos fazer de verdade depois de dar _match_ era
 aplicar um pouco de lógica e botar as coisas em um tipo assim que possível, ao
-invés de entrar no ramo de programação orientada a strings e listas cujo tamanho
-depende do contexto.
+invés de entrar no ramo de programação orientada a strings e a listas cujo
+tamanho depende do contexto.
 
 _[N.T.: Ele quer dizer que nós não queremos operar com uma estrutura tipo
 `resultado !! 0 -- é a mídia`, `resultado !! 1 -- é o tipo` etc. Coisas que não
@@ -260,7 +260,7 @@ data Info =
   | Video FilePath
     deriving (Eq, Show)
 
--- | Extrái informação sobre um arquivo de mídia se ele existir
+-- | Extrai informação sobre um arquivo de mídia se ele existir
 extractIfPresent :: (String, [String]) -> Info
 extractIfPresent (_, [name, "audio"]) = Audio name
 extractIfPresent (_, [name, "video"]) = Video name
@@ -297,8 +297,7 @@ main = do
 
 - - -
 
-### N.T. Extendida
-Vamos desconstruir esse programa rápidamente.
+### N.T. Extendida: Desconstruindo esse exemplo
 
 Todo o programa de Haskell precisa declarar um `main`, como no `C`. Essa é a
 primeira linha:
@@ -331,8 +330,9 @@ Em seguida chamamos:
 mapM_ todaNossaLogica (lines s)
 {% endhighlight %}
 
-O que isso faz é chamar `lines s` para gerar outra lista preguiçosa de cada uma
-das linhas do `stdin` e chamar `mapM_` com toda a nossa lógica sobre as linhas.
+O que essa expressão faz é chamar `lines s` para gerar outra lista preguiçosa de
+cada uma das linhas do `stdin` e chamar `mapM_` com toda a nossa lógica sobre as
+linhas.
 
 `mapM_` é um helper que executa uma função sobre uma collection no contexto de
 um `Monad` e omite o resultado. Podemos simplificar e dizer que é:
@@ -344,10 +344,13 @@ mapM_ fn lista = case lista of
     [] -> return ()
 {% endhighlight %}
 
-Na verdade se você escrever isso o compilador vai inferir quase o tipo certo pra
+Inclusive, se você escrever isso o compilador vai inferir quase o tipo certo pra
 você, exceto um detalhe: algo que foi introduzido no GHC 7.10 esse ano, que
 deixa a função ser mais genérica e funcionar em outras estruturas além de
-listas.
+listas; isso tem a ver com a proposta FTP (Foldable Traversable in Prelude),
+sobre a qual você pode ler [aqui](https://wiki.haskell.org/Foldable_Traversable_In_Prelude).
+
+_(avise se você gostaria de ler sobre isso)_
 
 Resta `todaNossaLogica` que é:
 {% highlight haskell %}
@@ -358,18 +361,19 @@ todaNossaLogica = reportOnInfo
 {% endhighlight %}
 
 Isso quer dizer para cada `linha` em `lines s`:
-- Chama `scan mediaRegex linha` (retorna a lista de matches `[(string, grupo)]`)
-- Passa isso pro `listToMaybe` (retorna um `Maybe` para o primeiro elemento)
-- Passa isso para `fmap extractIfPresent` (veja o parágrafo abaixo)
-- Passa o resultado final (um tipo estruturado - o `Info`) para `reportOnInfo`
 
-`fmap` é uma função da type-class `Functor` no Haskell; não vou explicar em
-detalhes, mas resumidamente, um `Functor` é: uma estrutura de dados que contem
-um valor no qual podemos aplicar uma função. Para isso temos o `fmap`. Ele:
+* Chama `scan mediaRegex linha` (retorna a lista de matches `[(string, grupo)]`)
+* Passa isso pro `listToMaybe` (retorna um `Maybe` para o primeiro elemento)
+* Passa isso para `fmap extractIfPresent` (veja o parágrafo abaixo)
+* Passa o resultado final (um tipo estruturado - o `Info`) para `reportOnInfo`
 
-- "entra" dentro da estrutura
-- aplica a função
-- retorna outra estrutura de dados contendo o valor transformado
+`fmap` é uma função da type-class `Functor` no Haskell. Muito resumidamente, um
+`Functor` é: uma estrutura de dados que contem um valor no qual podemos aplicar
+uma função. Para isso temos o `fmap`. Ele:
+
+* "entra" dentro da estrutura
+* aplica a função
+* retorna outra estrutura de dados contendo o valor transformado
 
 Então para um `Maybe a`, `fmap` recebe uma função de `a -> a`, um `Maybe a` e
 retorna outro `Maybe a`. Em outras palavras:
