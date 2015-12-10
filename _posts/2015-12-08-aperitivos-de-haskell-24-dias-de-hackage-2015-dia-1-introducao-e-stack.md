@@ -18,6 +18,7 @@ _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
 * **Dia 6:** (_não traduzido_) [encontrando utilitários com Hoogle e Hayoo: `MissingH`, `extra`]()
 * **Dia 7:** (_não traduzido_) [`semigroups`; lista `NonEmpty` e um caso de estudo de tipos e testes]()
 * **Dia 8:** (_não traduzido_) [`multiset`; eu queria que isso estivesse no pacote `containers` padrão]()
+* **Dia 9:** (_não traduzido_) [Template Haskell: `here`, `interpolate` e `file-embed`]()
 
 - - -
 
