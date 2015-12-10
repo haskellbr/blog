@@ -12,7 +12,7 @@ _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
 ## Índice de toda a série
 * **Dia 1:** [Introdução e Stack](/2015/12/08/aperitivos-de-haskell-24-dias-de-hackage-2015-dia-1-introducao-e-stack.html)
 * **Dia 2:** [Expressões regulares com `pcre-heavy`; scripts em Haskell usando o Stack](/2015/12/09/24-dias-de-hackage-2015-dia-2-expressoes-regulares-com-pcre-heavy-scripts-standalone-usando-stack.html)
-* **Dia 3:** (_não traduzido_) [`HSpec`: A importância de testes]()
+* **Dia 3:** (_não traduzido_) [`HSpec`; A importância de testes]()
 * **Dia 4:** (_não traduzido_) [`wreq`: Programação de clientes Web; com notas sobre lens e a sintaxe de operadores]()
 * **Dia 5:** (_não traduzido_) [`should-not-typecheck`: Fazendo Haskell quase dinamicamente tipada com tipos de erros "deferred"]()
 * **Dia 6:** (_não traduzido_) [encontrando utilitários com Hoogle e Hayoo: `MissingH`, `extra`]()
