@@ -20,7 +20,7 @@ Passei meus anos formadores escrevendo software antes de "framework de testes"
 estar no meu vocabulário; antes de ["desenvolvimento guiado a testes"
 (TDD)](https://en.wikipedia.org/wiki/Test-driven_development) ser uma tendencia.
 Eu tenho arrepios de pensar nesses anos, porque agora eu sou um crente dos
-testes e do desenvolvimento guiado a testes (TDD), segundo minha interpretação
+testes e do desenvolvimento guiado a testes (TDD) - segundo minha interpretação
 do que isso significa (já que todos temos definições diferentes).
 
 Há uma série de ferramentas de testes disponíveis para o ecossistema de Haskell
@@ -31,12 +31,12 @@ há algum tempo. Sendo mais preciso, Ollie nos seus "24 dias de Hackage" cobriu:
 - [`doctest`](https://hackage.haskell.org/package/doctest) [em 2013](https://ocharles.org.uk/blog/posts/2013-12-18-doctest.html)
 - [`tasty`](http://documentup.com/feuerbach/tasty) [em 2013](https://ocharles.org.uk/blog/posts/2013-12-03-24-days-of-hackage-tasty.html)
 
-e eu sinceramente recomendo pesquisar sobre essas ferramentas.
+e sinceramente recomendo pesquisar sobre essas ferramentas.
 
-Mas hoje, eu vou mostrar o uso do [`HSpec`](http://hspec.github.io/)
-(noto que um framework como o `tasty` ou o
-[`test-framework`](`https://batterseapower.github.io/test-framework/)
-são muito mais _fancy_ _[N.T. completos; com mais "bells-and-whistles"]_).
+Mas hoje, vou mostrar o uso do [`HSpec`](http://hspec.github.io/) (noto que um
+framework como o `tasty` ou o
+[`test-framework`](`https://batterseapower.github.io/test-framework/) são muito
+mais completos _[N.T. "fancy"]_).
 
 - - -
 
@@ -51,7 +51,7 @@ Eu comecei a escrever testes por dois motivos:
 
 Mas depois que comecei, eu não olhei pra trás, mesmo usando outras linguagens
 como Scala ou Haskell. Hoje, independente da linguagem que estiver usando,
-espero ter um framework de testes decente que possa começar usando
+espero ter um framework de testes decente que possa começar a usar
 imediatamente. Eu até fiz o experimento de
 [aprender uma linguagem novíssima, Elixir, escrevendo testes](http://conscientiousprogrammer.com/blog/2013/08/26/openhack-pittsburgh-learning-elixir-test-driven-and-package-publishing/).
 Não posso levar um ecossistema a sério se não há pelo menos um framework de
