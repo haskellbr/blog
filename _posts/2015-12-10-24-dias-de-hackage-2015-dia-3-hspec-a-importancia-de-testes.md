@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "HSpec; A importância de testes"
+title: "24 dias de Hackage, 2015 - dia 3 - HSpec; A importância de testes"
 author: Franklin Chen
 author_url: "http://conscientiousprogrammer.com/"
 translator: Pedro Yamada
