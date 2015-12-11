@@ -209,9 +209,10 @@ acontecendo, ainda que não seja claro **como**.
 
 Agora é um bom momento para falar sobre o problema de sintaxe no código escrito
 em Haskell, porque estou assumindo que você possa ainda não conhecer o HSpec, e
-não posso assumir seja um desenvolvedor de Haskell experiente, porque não estou
-escrevendo essa série para Haskellers avançados mas para as pessoas que estão
-começando a molhar os pés no ecossistema e com experiência limitada com Haskell.
+não posso assumir seja um desenvolvedor de Haskell experiente. Afinal, não
+estou escrevendo essa série para Haskellers avançados mas para as pessoas que
+estão começando a molhar os pés no ecossistema e com experiência limitada com
+Haskell.
 
 É conveniente usar o estilo "point-free" acima, mas poderia ter escrito:
 
@@ -242,8 +243,8 @@ também. Se você é relativamente novo à sintaxe, o Gabriel Gonzalez escreveu 
 bom tutorial sobre "decodificar a sintaxe" cobrindo um pouco disso [aqui](http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code.html).
 
 Mas dizer "você não precisa escrever" não sinifica nada se "todos estão
-escrevendo assim" e você tem que *ler* o código de qualquer jeito. Mas é a
-comunidade como um todo que dita o tom do que é escrito e lido.
+escrevendo assim" e você tem que *ler* o código de qualquer jeito. Ainda assim,
+é a comunidade como um todo que dita o tom do que é escrito e lido.
 
 Um motivo pelo qual eu gosto do HSpec é que ele não exagera com a sintaxe.
 O [HUnit](https://hackage.haskell.org/package/HUnit), um framework de testes
