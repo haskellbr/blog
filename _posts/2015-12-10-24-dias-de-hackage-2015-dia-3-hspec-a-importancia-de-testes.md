@@ -63,11 +63,11 @@ ditado infortúno "testes versus tipos". Discordo completamente disso. Eu
 quero meus tipos e também meus testes: quero usar todas as ferramentas possíveis
 que me ajudem a desenhar, verificar e consertar meu código! No [Pittsburgh TechFest](http://pghtechfest.com/) 2014,
 dei uma palestra ["Exploring type-directed, test-driven development" _[N.T. "Explorando desenvolvimento guiado a testes e direcionado por tipos"]_](http://www.slideshare.net/FranklinChen/presentation-37257104)
-dando minha opinião pessoal sobre fazer o melhor uso de tipos e testes como
-parte de um processo iterativo de refinar, entender e expressar uma solução para
-uma tarefa (esse era antes do termo "desenvolvimento direcionado a tipos" virar
-o título de um livro que será lançado em breve sobre usar Idris,
-"Desenvolvimento direcionado a tipos com Idris")
+dando minha opinião pessoal sobre como usar uso de tipos e testes juntos como
+parte de um processo iterativo de refinar, entender e expressar uma solução
+para uma tarefa (esse era antes do termo "desenvolvimento direcionado a tipos"
+virar o título de um livro que será lançado em breve sobre usar Idris,
+"Desenvolvimento direcionado a tipos com Idris").
 
 O tópico geral sobre como combinar testes e tipos da melhor forma está bem fora
 do escopo desse artigo, mas eu queria fazer um ponto: o maior benefício dos
@@ -108,17 +108,17 @@ que claramente foi a inspiração para o HSpec.
 ## É tudo sobre descoberta automática
 
 Antes de dizer qualquer outra coisa sobre o HSpec, quero dizer que um dos
-motivos para eu o usar foi a descoberta automática de testes. Dê uma olhada no
+motivos para eu o usar foi a _descoberta automática_ de testes. Dê uma olhada no
 [manual](http://hspec.github.io/hspec-discover.html) para detalhes.
 
-Descoberta automática significa que dado um boilerplate simples, você pode usar
-"convenção sobre configuração" e só criar arquivos chamados
-"AlgumaCoisa**Spec**.hs" e os botar em qualquer lugar no seu diretório de testes
-e eles serão compilados e executados quando você executar `stack test`. Isso
-significa que podemos escrever módulos de teste quando bem entendermos, os
-mover, apagar, adicionar e refatorar sem ter que nos preocupar com escrever um
-módulo que amarre as pontas, importanto todos os módulos de testes e juntando
-eles em um só suite de testes.
+_Descoberta automática_ significa que dado um boilerplate simples, você pode
+usar "convenção sobre configuração". É só criar arquivos chamados
+"AlgumaCoisa**Spec**.hs" e os botar em qualquer lugar no seu diretório de
+testes e eles serão compilados e executados quando você executar `stack
+test`. Isso significa que podemos escrever módulos de teste quando bem
+entendermos, os mover, apagar, adicionar e refatorar sem ter que nos preocupar
+com escrever um módulo que amarre as pontas, importanto todos os módulos de
+testes e juntando eles em um só suite de testes.
 
 Aqui está o setup que eu tenho em todos os meus projetos que usam HSpec. Eu
 o provi no meu template de projeto de exemplo descrito no
@@ -152,12 +152,12 @@ passo.
 
 ### Versão inicial do código de testes
 
-Primeiro, vou apresentar código que eu nunca escrevi inicialmente, porque eu
-pulei essa etapa e refatorei o código na minha cabeça de imediato. Mas eu decidi
-que para mostrar a força de Haskell como uma linguagem para embedar linguagens
-de domínio específico (DSLs), eu retroativamente escrevi o código mais óbvio que
-mostra como o HSpec funciona sem introduzir coisas que não tem a ver com ele. (O
-código está no branch [`boilerplated-hspec`](https://github.com/FranklinChen/twenty-four-days2015-of-hackage/tree/boilerplated-hspec).)
+Primeiro, vou apresentar código que não escrevi inicialmente, porque eu pulei
+essa etapa e refatorei o código na minha cabeça de imediato. Mas eu decidi que
+para mostrar a força de Haskell como uma linguagem para embedar linguagens de
+domínio específico (DSLs), eu retroativamente escrevi o código mais óbvio que
+mostra como o HSpec funciona sem introduzir coisas que não tem a ver com
+ele. (O código está no branch [`boilerplated-hspec`](https://github.com/FranklinChen/twenty-four-days2015-of-hackage/tree/boilerplated-hspec).)
 
 {% highlight haskell %}
 module PCREHeavyExampleSpec where
@@ -196,10 +196,10 @@ no regex e um para os exemplos que **não o devem**.
 
 Note que importamos e usamos `mediaRegex` do módulo `PCREHeavyExample`.
 
-Diferente do nosso programa de exemplo de ontem, que usou `scan` do `pcre-heavy`
-para coletar bindings dos _matches_, nós só nos importamos se algo deu _match_
-ou não. Por isso usamos o operador `=~` ao invês do `scal`. Ele pega uma string
-e uma regex e retorna um `Bool`.
+Diferente do nosso programa de exemplo de ontem, que usou `scan` do
+`pcre-heavy` para coletar bindings dos _matches_, nós só nos importamos se algo
+deu ou não deu _match_. Por isso usamos o operador `=~` ao invês do `scal`. Ele
+pega uma string e uma regex e retorna um `Bool`.
 
 O código dos testes é conciso o bastante e o domínio do problema bem entendido.
 Mesmo que a sintaxe pareça estranha, espero que seja claro **o quê** está
