@@ -552,13 +552,6 @@ Todo o código para a série estará [nesse repositório do GitHub](https://gith
 - - -
 
 ### Nota do tradutor
-Foi muito difícil traduzir esse post. Em parte porque ele era um pouco menos
-rigorozo com o inglês. Sua linguagem era menos traduzível. Principalmente acho
-que foi porque estou cansado e discordo com boa parte do que foi exposto nesse
-post.
-
-De qualquer forma, esse foi o terceiro dia da série e amanhã continuamos
-
 Se você quer ajudar com esse tipo de coisa, agora é a hora. Entre no
 [Slack](http://haskellbr.com/slack/) ou no
 [IRC](http://irc.lc/freenode/haskell-br) da [HaskellBR](http://haskellbr.com/) e
