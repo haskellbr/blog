@@ -13,7 +13,7 @@ _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
 * **Dia 1:** [Introdução e Stack](/2015/12/08/aperitivos-de-haskell-24-dias-de-hackage-2015-dia-1-introducao-e-stack.html)
 * **Dia 2:** [Expressões regulares com `pcre-heavy`; scripts em Haskell usando o Stack](/2015/12/09/24-dias-de-hackage-2015-dia-2-expressoes-regulares-com-pcre-heavy-scripts-standalone-usando-stack.html)
 * **Dia 3:** [`HSpec`; A importância de testes](/2015/12/10/24-dias-de-hackage-2015-dia-3-hspec-a-importancia-de-testes.html)
-* **Dia 4:** (_não traduzido_) [`wreq`: Programação de clientes Web; com notas sobre lens e a sintaxe de operadores]()
+* **Dia 4:** [`wreq`: Programação de clientes Web; com notas sobre lens e a sintaxe de operadores](/2015/12/12/24-dias-de-hackage-2015-dia-4-wreq-programacao-de-clientes-web-com-notas-sobre-lens-e-a-sintaxe-de-operadores.html)
 * **Dia 5:** (_não traduzido_) [`should-not-typecheck`: Fazendo Haskell quase dinamicamente tipada com tipos de erros "deferred"]()
 * **Dia 6:** (_não traduzido_) [encontrando utilitários com Hoogle e Hayoo: `MissingH`, `extra`]()
 * **Dia 7:** (_não traduzido_) [`semigroups`; lista `NonEmpty` e um caso de estudo de tipos e testes]()
