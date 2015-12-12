@@ -9,7 +9,7 @@ Essa é uma nota rápida para completar o [dia 4 da série 24 dias de Hackage](/
 
 Você pode ter notado que Haskell tem mais de um tipo para representar texto.
 Isso é, de fato, um problema do ecossistema da linguagem, mas não vale a pena
-discutir isso a fundo. Como expliquei
+discutir as críticas a fundo. Como expliquei
 [no primeiro post desse blog em português](http://localhost:4000/2015/12/04/implementando-fibonacci-em-haskell.html#por-que-digo-listas-e-no-arrays)
 o literal `[1, 2, 3]` em Haskell é uma lista-ligada, não um Array. O tipo
 `String` em Haskell também é uma lista:
@@ -18,8 +18,9 @@ o literal `[1, 2, 3]` em Haskell é uma lista-ligada, não um Array. O tipo
 type String = [Char]
 {% endhighlight %}
 
-Você pode imaginar que isso tem seus problemas, porque listas não são a melhor
-estrutura de dados para muitas tarefas relacionadas a processamento de texto.
+Você pode imaginar que isso causa problemas de performance, porque listas não
+são a melhor estrutura de dados para muitas tarefas relacionadas a
+processamento de texto.
 
 Por isso, há dois pacotes que implementam tipos para strings com características
 diferentes:
@@ -37,10 +38,22 @@ class IsString s where
     fromString :: String -> s
 {% endhighlight %}
 
+Algumas implementações da type-class seriam:
+
+{% highlight haskell %}
+instance IsString String where
+    fromString = id
+
+instance IsString Text where
+    fromString = pack
+{% endhighlight %}
+
 Assim, quando escrevemos o literal `"asdfasdf"` no código a extensão vai
 reescrever isso como `(fromString "asdfasdf")`. Isso nos deixa ter
 `"asdfasdf" :: String` e `"asdfasdf" :: Text`. Na maior parte dos casos o
 compilador vai só inferir o tipo certo e as coisas vão funcionar fluidamente.
+
+- - -
 
 Outra extensão na mesma linha é [`OverloadedLists`](https://ghc.haskell.org/trac/ghc/wiki/OverloadedLists).
 Ela usa type-class `IsList`, que é basicamente definida como:
