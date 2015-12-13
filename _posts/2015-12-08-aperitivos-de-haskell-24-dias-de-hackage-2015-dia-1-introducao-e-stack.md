@@ -14,7 +14,7 @@ _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
 * **Dia 2:** [Expressões regulares com `pcre-heavy`; scripts em Haskell usando o Stack](/2015/12/09/24-dias-de-hackage-2015-dia-2-expressoes-regulares-com-pcre-heavy-scripts-standalone-usando-stack.html)
 * **Dia 3:** [`HSpec`; A importância de testes](/2015/12/10/24-dias-de-hackage-2015-dia-3-hspec-a-importancia-de-testes.html)
 * **Dia 4:** [`wreq`: Programação de clientes Web; com notas sobre lens e a sintaxe de operadores](/2015/12/12/24-dias-de-hackage-2015-dia-4-wreq-programacao-de-clientes-web-com-notas-sobre-lens-e-a-sintaxe-de-operadores.html)
-* **Dia 5:** [`should-not-typecheck`: Fazendo Haskell quase dinamicamente tipado com tipos de erros "deferred"](/2015/12/13/24-dias-de-hackage-2015-dia-5-should-not-typecheck-fazendo-haskell-quase-dinamicamente-tipado-com-tipos-de-erros-deferred.html)
+* **Dia 5:** [`should-not-typecheck`: Fazendo Haskell quase dinamicamente tipado com tipos de erros "deferred"](/2015/12/13/24-dias-de-hackage-2015-dia-5-should-not-typecheck-fazendo-haskell-quase-dinamicamente-tipado-com-deferred-type-errors.html)
 * **Dia 6:** (_não traduzido_) [encontrando utilitários com Hoogle e Hayoo: `MissingH`, `extra`]()
 * **Dia 7:** (_não traduzido_) [`semigroups`; lista `NonEmpty` e um caso de estudo de tipos e testes]()
 * **Dia 8:** (_não traduzido_) [`multiset`; eu queria que isso estivesse no pacote `containers` padrão]()

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "24 dias de Hackage, 2015 - dia 5 - should-not-typecheck: Fazendo Haskell quase dinamicamente tipado com tipos de erros deferred"
+title: "24 dias de Hackage, 2015 - dia 5 - should-not-typecheck: Fazendo Haskell quase dinamicamente tipado com deferred-type-errors"
 author: Franklin Chen
 author_url: "http://conscientiousprogrammer.com/"
 translator: Pedro Yamada
