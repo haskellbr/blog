@@ -94,7 +94,7 @@ não documentada sobre regexes, que provavelmente não é o que queremos.
 ## Uma técnica de busca importante: assuma o menor número de coisas possível
 
 Provavelmente a dica mais importante para conseguir resultados bons para uma
-busca a partir de um tipo é fazer o tipo o quão genérico quanto possível:
+busca a partir de um tipo é fazer o tipo tão genérico quanto possível:
 *quanto mais variáveis de tipo, o melhor*, e também só use _constraints_ de
  _type-class_ que você precisar de fato. A operação que nós queremos na verdade
  não é restrita a strings. Na verdade, é uma operação sobre listas. Então o
