@@ -32,14 +32,15 @@ Parecem haver duas filosofias para bibliotecas de utilitários:
   copiar e colar, ao invés de usar algo que pode não ter qualidade ou não ser
   mantido
 
-Eu tendo a preferir re-uso, mas já copiei (e modifiquei) trechos que precisava,
-só porque não queria o resto de uma biblioteca enorme que depende de mais
-outras coisas que não preciso. Eu acho que esse é um problema de
-granularidade. Já que temos a Web hoje, muitas pessoas propuseram a ideia de
+Eu tendo a preferir o re-uso, mas já copiei (e até modifiquei) trechos de
+código que precisava, só porque não queria o resto de uma biblioteca enorme que
+depende de mais outras coisas que não preciso. Eu acho que esse é um problema
+de granularidade. Já que temos a Web hoje, muitas pessoas propuseram a ideia de
 que o conceito de uma "biblioteca" deveria virar obsoleto dando lugar a
 "micro-bibliotecas", talvez até no nível de um único indentificador exportado,
 mas o tópico está fora do escopo desse artigo. (Para uma dessas ideias, veja o
-["The internet of code"](http://www.haskellforall.com/2015/05/the-internet-of-code.html) do Gabriel Gonzalez).
+["The internet of code"](http://www.haskellforall.com/2015/05/the-internet-of-code.html)
+do Gabriel Gonzalez).
 
 _[N.T. A HaskellBR pode contribuir com isso! Ajude em [haskellbr/missingh](https://github.com/haskellbr/missingh#missingh-haskellbr-fork)]_
 
