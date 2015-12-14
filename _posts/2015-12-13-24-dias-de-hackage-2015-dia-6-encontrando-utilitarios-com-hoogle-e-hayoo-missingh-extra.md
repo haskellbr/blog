@@ -77,7 +77,7 @@ Por qual assinatura deveríamos procurar? Talvez:
 String -> String -> String -> String
 {% endhighlight %}
 
-Ou seja (com algo próximo de sua documentação Haddock)
+Ou seja (com algo próximo de sua documentação [Haddock](https://www.haskell.org/haddock/)):
 
 {% highlight haskell %}
 String     -- ^ a substring para substituir
