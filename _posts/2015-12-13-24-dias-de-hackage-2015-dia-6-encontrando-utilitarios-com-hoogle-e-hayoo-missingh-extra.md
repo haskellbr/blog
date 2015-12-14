@@ -27,7 +27,7 @@ tiver um chute do nome de alguma função que precise.
 
 Parecem haver duas filosofias para bibliotecas de utilitários:
 
-* Re-use é ótimo, vamos fazer isso
+* Re-uso é ótimo, vamos fazer isso
 * Todas as dependencias são um problema em potencial, então vamos reinventar ou
   copiar e colar, ao invés de usar algo que pode não ter qualidade ou não ser
   mantido
