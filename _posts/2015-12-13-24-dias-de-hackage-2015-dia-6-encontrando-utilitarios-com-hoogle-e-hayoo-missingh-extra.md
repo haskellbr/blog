@@ -113,13 +113,12 @@ igualdade.
 
 A
 [busca no Hayoo](http://hayoo.fh-wedel.de/?query=Eq+a+%3D%3E+[a]+-%3E+[a]+-%3E+[a]+-%3E+[a])
-imediatamente retorna resultados mais promissores do que com `String`, de
-pacores como `utility-ht`, `MissingH` e `extra`. O `pandoc` também apareceu,
+imediatamente retorna resultados mais promissores do que a antiga com `String`,
+com pacotes como `utility-ht`, `MissingH` e `extra`. O `pandoc` também apareceu,
 mas ele é uma
-[ferramenta enorme de processamento de texto](http://pandoc.org/),
-não uma biblioteca que eu incluiria só por uma função utilitária pequena!
-(Note que `pandoc` foi
-coberto em um
+[ferramenta enorme de processamento de texto](http://pandoc.org/), não uma
+biblioteca que eu incluiria só por uma função utilitária pequena!  (Note que
+`pandoc` foi coberto em um
 [dia de Hackage de 2013](https://ocharles.org.uk/blog/guest-posts/2013-12-12-24-days-of-hackage-pandoc.html).
 
 A
