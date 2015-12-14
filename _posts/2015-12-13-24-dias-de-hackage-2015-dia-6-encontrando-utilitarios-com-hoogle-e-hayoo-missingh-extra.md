@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "24 dias de Hackage, 2015 - dia 5 - Encontrando utilitários com Hoogle e Hayoo: MissingH, extra"
+title: "24 dias de Hackage, 2015 - dia 6 - Encontrando utilitários com Hoogle e Hayoo: MissingH, extra"
 author: Franklin Chen
 author_url: "http://conscientiousprogrammer.com/"
 translator: Pedro Yamada
