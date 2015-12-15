@@ -1,0 +1,47 @@
+#!/usr/bin/env stack
+-- stack --install-ghc runghc --package turtle --package projectroot --package text --package wreq
+{-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE LambdaCase #-}
+
+import qualified Data.Text    as Text
+import qualified Data.Text.IO as Text
+import           Prelude      hiding (FilePath)
+import           System.Environment (getArgs)
+import           Turtle
+
+main :: IO ()
+main = getArgs >>= \case
+    "convert":inp:out:_ -> do
+        ec <- shell ("cat " <> Text.pack inp <> " |"
+                    <> "sed 's/{{< \\/highlight >}}/{% endhighlight %}/' |"
+                    <> "sed 's/{{< highlight /{% highlight /' |"
+                    <> "sed 's/>}}/%}/'"
+                    <> " > " <> Text.pack out
+                ) empty
+        case ec of
+            ExitSuccess ->
+                echo "Converted."
+            failure -> exit failure
+    "new":_ -> do
+        putStr "Paste the URL for the post you want to translate: "
+        url <- Text.getLine
+        echo ("Fetching " <> Text.take 80 url <> "...")
+        ec <- shell ("curl -L -s " <> url <> " > newpost.md") empty
+        case ec of
+            ExitSuccess -> do
+                echo "Fetched."
+                echo "Converting to jekyll syntax..."
+                ec' <- shell ("cat newpost.md |"
+                            <> "sed 's/{{< \\/highlight >}}/{% endhighlight %}/' |"
+                            <> "sed 's/{{< highlight /{% highlight /' |"
+                            <> "sed 's/>}}/%}/'"
+                            <> " > newpost2.md"
+                        ) empty
+                case ec' of
+                    ExitSuccess -> do
+                        mv "newpost2.md" "newpost.md"
+                        echo "Converted newpost.md."
+                        echo "Edit newpost.md."
+                    failure -> exit failure
+            failure -> exit failure
+    _ -> error "No parse of args"
