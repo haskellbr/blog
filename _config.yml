@@ -12,3 +12,4 @@ github_username:  haskellbr
 
 # Build settings
 markdown: kramdown
+excerpt_separator: "<!-- more -->"

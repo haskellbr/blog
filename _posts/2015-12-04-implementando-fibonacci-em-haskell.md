@@ -8,6 +8,8 @@ A mágica da avaliação não estrita e funções de alta ordem. Um crash course
 minutos em Haskell e a descontrução da implementação de fibonacci clássica em
 uma linha com comparações de trechos de JavaScript.
 
+<!-- more -->
+
 Muitos que se aventuraram em aprender Haskell devem ter se deparado com a
 implementação da sequência de Fibonacci em uma linha e com complexidade linear.
 Vamos a desconstruir, já que isso ainda não foi feito em português.
