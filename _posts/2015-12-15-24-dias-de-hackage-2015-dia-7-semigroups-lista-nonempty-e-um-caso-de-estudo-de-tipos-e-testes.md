@@ -11,6 +11,9 @@ excerpt_separator: "<!-- more -->"
 _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
 [Ler original](http://conscientiousprogrammer.com/blog/2015/12/07/24-days-of-hackage-2015-day-7-semigroups-nonempty-list-and-a-case-study-of-types-and-tests/)_
 
+## Índice de toda a série
+O índice de toda a série está no topo do artigo para o [dia 1](/2015/12/08/aperitivos-de-haskell-24-dias-de-hackage-2015-dia-1-introducao-e-stack.html).
+
 # Dia 7
 O quão frequentemente o seguinte erro aconteceu para você, seja em Haskell ou
 em alguma outra linguagem?
