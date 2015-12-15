@@ -5,6 +5,7 @@ author: Franklin Chen
 author_url: "http://conscientiousprogrammer.com/"
 translator: Pedro Yamada
 translator_url: "https://github.com/yamadapc"
+excerpt_separator: "<!-- more -->"
 ---
 
 _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
@@ -19,6 +20,8 @@ em alguma outra linguagem?
 {% endhighlight %}
 
 Basicamente, o código explodiu ao assumir que uma lista vazia tinha elementos.
+
+<!-- more -->
 
 De fato, uma pergunta
 [foi postada no reddit recentemente](https://www.reddit.com/r/haskell/comments/3vlb8v/reading_data_problems/)

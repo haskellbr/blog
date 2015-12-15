@@ -5,6 +5,7 @@ author: Franklin Chen
 author_url: "http://conscientiousprogrammer.com/"
 translator: Pedro Yamada
 translator_url: "https://github.com/yamadapc"
+excerpt_separator: "<!-- more -->"
 ---
 _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
 [Ler original](http://conscientiousprogrammer.com/blog/2015/12/02/24-days-of-hackage-2015-day-2-regexes-with-pcre-heavy-standalone-haskell-scripts-using-stack/)_
@@ -19,6 +20,8 @@ Não ria, mas muito tempo atrás, minha linguagem de programação principal era
 Perl (entre meados de 1999 e 2010). Havia uma série de razões para isso; uma
 delas era que Perl fazia processamento de texto usando expressões regulares ser
 muito fácil.
+
+<!-- more -->
 
 Se você é um Haskeller experiente, você pode estar pensando "Por que não usar um
 parser de verdade?", algo usando o venerável

@@ -3,9 +3,15 @@ layout: post
 title: Sobre Text e OverloadedStrings
 author: Pedro Tacla Yamada
 author_url: "https://github.com/yamadapc"
+excerpt_separator: "<!-- more -->"
 ---
 
-Essa é uma nota rápida para completar o [dia 4 da série 24 dias de Hackage](/2015/12/12/24-dias-de-hackage-2015-dia-4-wreq-programacao-de-clientes-web-com-notas-sobre-lens-e-a-sintaxe-de-operadores.html).
+Essa é uma nota rápida para completar o
+[dia 4 da série 24 dias de Hackage](/2015/12/12/24-dias-de-hackage-2015-dia-4-wreq-programacao-de-clientes-web-com-notas-sobre-lens-e-a-sintaxe-de-operadores.html). Vou
+comentar brevemente sobre a extensão `OverloadedStrings` e os tipos `String`,
+`ByteString` e `Text`.
+
+<!-- more -->
 
 Você pode ter notado que Haskell tem mais de um tipo para representar texto.
 Isso é, de fato, um problema do ecossistema da linguagem, mas não vale a pena

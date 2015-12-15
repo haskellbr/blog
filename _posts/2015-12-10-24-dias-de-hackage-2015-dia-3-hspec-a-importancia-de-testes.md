@@ -5,6 +5,7 @@ author: Franklin Chen
 author_url: "http://conscientiousprogrammer.com/"
 translator: Pedro Yamada
 translator_url: "https://github.com/yamadapc"
+excerpt_separator: "<!-- more -->"
 ---
 _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
 [Ler original](http://conscientiousprogrammer.com/blog/2015/12/03/24-days-of-hackage-2015-day-3-hspec-the-importance-of-testing/)_
@@ -22,6 +23,8 @@ estar no meu vocabulário; antes de ["desenvolvimento guiado a testes"
 Eu tenho arrepios de pensar nesses anos, porque agora eu sou um crente dos
 testes e do desenvolvimento guiado a testes (TDD) - segundo minha interpretação
 do que isso significa (já que todos temos definições diferentes).
+
+<!-- more -->
 
 Há uma série de ferramentas de testes disponíveis para o ecossistema de Haskell
 há algum tempo. Sendo mais preciso, Ollie nos seus "24 dias de Hackage" cobriu:

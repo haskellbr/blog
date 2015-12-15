@@ -13,7 +13,7 @@ body_class: post-template
 <article role="main" class="{% if page.image %}image{% endif %}">
     <header>
       <a href="{{ site.baseurl }}/" id="home_link">«</a>
-      <div class="meta"><time datetime="{{ page.date | date:'%Y-%m-%d' }}"><a href="{{ page.url }}">{{ page.date | date: "%B %d, %Y" }}</a></time>
+      <div class="meta"><time datetime="{{ page.date | date:'%Y-%m-%d' }}"><a href="{{ page.url }}">{{ page.date | date: "%d/%m/%Y" }}</a></time>
         <span class="count" id="js-reading-time">&nbsp;</span>
       </div>
       <h1>{{ page.title }}</h1>
@@ -106,9 +106,10 @@ body_class: post-template
 
 
 <script>
-window.onload = function () {
+$(function () {
   reading_time();
-}
+});
+
 function get_text(el) {
   ret = "";
   var length = el.childNodes.length;
@@ -125,11 +126,12 @@ function reading_time () {
   if (post_content) {
     var words = get_text(post_content),
       count = words.split(/\s+/).length,
-    read_time = Math.ceil((count / 150)),
+    read_time = Math.ceil((count / 300)),
         read_time_node = document.createTextNode(read_time + ' min read');
     document.getElementById('js-reading-time').appendChild(read_time_node);
   }
 }
+
 $(function(){
   var share_modal = $("#share_modal"),
   update_social_links = true;

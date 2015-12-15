@@ -5,6 +5,7 @@ author: Franklin Chen
 author_url: "http://conscientiousprogrammer.com/"
 translator: Pedro Yamada
 translator_url: "https://github.com/yamadapc"
+excerpt_separator: "<!-- more -->"
 ---
 _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
 [Ler original](http://conscientiousprogrammer.com/blog/2015/11/30/haskell-tidbits-24-days-of-hackage-2015-day-1-introduction-and-stack/)_
@@ -20,6 +21,8 @@ e usei a biblioteca [LWP](http://search.cpan.org/dist/libwww-perl/lib/LWP.pm)
 para fazer _Web scraping_ automatizado. Eu continuei fazendo isso anos 2000
 adentro. Estou feliz de que hoje, eu posso só usar Haskell para fazer esse tipo
 de programação e o fazer de forma sucinta.
+
+<!-- more -->
 
 O tópico de hoje é o [`wreq`](http://www.serpentine.com/wreq/), a biblioteca de
 alto nível de [Bryan O'Sullivan](http://www.serpentine.com/blog/) para fazer

@@ -5,6 +5,7 @@ author: Franklin Chen
 author_url: "http://conscientiousprogrammer.com/"
 translator: Pedro Yamada
 translator_url: "https://github.com/yamadapc"
+excerpt_separator: "<!-- more -->"
 ---
 
 _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
@@ -24,6 +25,8 @@ ou o
 [`Hayoo`](http://hayoo.fh-wedel.de/examples).
 Você também pode usar outros critérios, como nomes; isso pode ser útil se você
 tiver um chute do nome de alguma função que precise.
+
+<!-- more -->
 
 Parecem haver duas filosofias para bibliotecas de utilitários:
 

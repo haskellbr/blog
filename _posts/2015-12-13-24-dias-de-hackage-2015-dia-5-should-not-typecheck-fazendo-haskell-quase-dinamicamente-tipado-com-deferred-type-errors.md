@@ -5,6 +5,7 @@ author: Franklin Chen
 author_url: "http://conscientiousprogrammer.com/"
 translator: Pedro Yamada
 translator_url: "https://github.com/yamadapc"
+excerpt_separator: "<!-- more -->"
 ---
 
 _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
@@ -20,6 +21,8 @@ erro em algum lugar da sua code base, mas você queria poder rodar o programa de
 qualquer jeito, ou porque não se importava com um erro que não tinha nada a ver
 com o que estava fazendo, ou porque queria poder andar pelo código e debugar o
 que o erro era de fato? Eu certamente já.
+
+<!-- more -->
 
 Já quis escrever um teste unitário para verificar que a code base não permitia
 código que você não queria permitir, mas foi frustrado porque como você escreve

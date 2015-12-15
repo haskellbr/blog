@@ -11,7 +11,7 @@ body_class: "home-template user"
       <article class="{%comment%}post_class{%endcomment%}">
           <div class="meta">
             <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
-              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%B %-d, %Y" }}</a>
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%d/%m/%Y" }}</a>
             </time>
           </div>
 
