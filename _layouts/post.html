@@ -127,7 +127,9 @@ function reading_time () {
     var words = get_text(post_content),
       count = words.split(/\s+/).length,
     read_time = Math.ceil((count / 300)),
-        read_time_node = document.createTextNode(read_time + ' min read');
+        read_time_node = document.createTextNode(
+          'Leitura de ' + read_time + ' minutos'
+        );
     document.getElementById('js-reading-time').appendChild(read_time_node);
   }
 }
