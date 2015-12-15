@@ -42,6 +42,11 @@
 <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
 
 <script>
+if(document.location.host === 'blog.haskellbr.com') {
+  setupPresence()
+}
+
+function setupPresence() {
   function slug(str) {
     return str.replace(/[^\w]+/g, '-').replace(/^-/, '');
   }
@@ -91,6 +96,7 @@
       }, 1000);
     });
   });
+}
 </script>
 
 <style>
