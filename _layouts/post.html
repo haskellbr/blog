@@ -12,11 +12,23 @@ body_class: post-template
 
 <article role="main" class="{% if page.image %}image{% endif %}">
     <header>
-      <a href="{{ site.baseurl }}/" id="home_link">«</a>
-      <div class="meta"><time datetime="{{ page.date | date:'%Y-%m-%d' }}"><a href="{{ page.url }}">{{ page.date | date: "%d/%m/%Y" }}</a></time>
-        <span class="count" id="js-reading-time">&nbsp;</span>
+      <div>
+        <a style="color: #aaa" href="{{ site.baseurl }}/">Home</a>
       </div>
+
+      <div style="margin-top: 10px;" class="meta"><time datetime="{{ page.date | date:'%Y-%m-%d' }}"><a href="{{ page.url }}">{{ page.date | date: "%d/%m/%Y" }}</a></time>
+        <span class="count" id="js-reading-time">&nbsp;</span>
+
+        <span style="color: #aaa">
+          <span style="margin-left: 20px; padding: 3px; display: inline-block; margin-bottom: 5px" class="js-views-counter" data-href="{{ page.url }}"></span>
+
+
+          <span style="margin-left: 20px; padding: 3px; display: inline-block;" class="js-active-counter" data-href="{{ page.url }}"></span>
+        </span>
+      </div>
+
       <h1>{{ page.title }}</h1>
+
       {% if page.author %}
         <h2 class="author-name" style="color: #aaa; font-size: 20px; margin-top: 20px;">
           {% if page.author_url %}

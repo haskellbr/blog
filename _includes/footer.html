@@ -28,6 +28,7 @@
         </div>
     </div>
 </footer>
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -37,3 +38,88 @@
   ga('create', 'UA-70661764-2', 'auto');
   ga('send', 'pageview');
 </script>
+
+<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+
+<script>
+  function slug(str) {
+    return str.replace(/[^\w]+/g, '-').replace(/^-/, '');
+  }
+
+  window.pageviewsRef = new Firebase('https://haskellbr.firebaseio.com/pageviews');
+  window.activeUsersRef = new Firebase('https://haskellbr.firebaseio.com/connected');
+  if(document.location.pathname !== '/') {
+    window.pageviewsRef.child(slug(document.location.pathname)).transaction(function(views) {
+      return (views || 0) + 1;
+    });
+
+    var userRef = activeUsersRef.child(slug(document.location.pathname)).push();
+    var presenceRef = new Firebase("https://haskellbr.firebaseio.com/.info/connected");
+    presenceRef.on("value", function(snap) {
+      if (snap.val()) {
+        userRef.set(true);
+        userRef.onDisconnect().remove();
+      }
+    });
+  }
+
+  $('.js-active-counter').each(function(i, el) {
+    var $el = $(el);
+    var href = $el.data('href');
+    var interval;
+    activeUsersRef.child(slug(href)).on("value", function(connectedCount) {
+      clearInterval(interval);
+      $el.addClass('flash');
+      $el.text((connectedCount.numChildren() || 0) + ' lendo agora');
+      interval = setTimeout(function() {
+        $el.removeClass('flash');
+      }, 1000);
+    });
+  });
+
+  $('.js-views-counter').each(function(i, el) {
+    var $el = $(el);
+    var href = $el.data('href');
+
+    var interval;
+    window.pageviewsRef.child(slug(href)).on('value', function(views) {
+      clearInterval(interval);
+      $el.addClass('flash');
+      $el.text('Lido ' + (views.val() || 0) + ' vezes');
+      interval = setTimeout(function() {
+        $el.removeClass('flash');
+      }, 1000);
+    });
+  });
+</script>
+
+<style>
+.flash {
+  -moz-animation: flash 1s ease-out;
+  -moz-animation-iteration-count: 1;
+
+  -webkit-animation: flash 1s ease-out;
+  -webkit-animation-iteration-count: 1;
+
+  -ms-animation: flash 1s ease-out;
+  -ms-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes flash {
+  0% { background-color: none; }
+  50% { background-color: yellow; }
+  100% { background-color: none; }
+}
+
+@-moz-keyframes flash {
+  0% { background-color: none; }
+  50% { background-color: yellow; }
+  100% { background-color: none; }
+}
+
+@-ms-keyframes flash {
+  0% { background-color: none; }
+  50% { background-color: yellow; }
+  100% { background-color: none; }
+}
+</style>
