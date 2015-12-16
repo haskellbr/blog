@@ -16,11 +16,11 @@ O índice de toda a série está no topo do artigo para o [dia 1](/2015/12/08/ap
 
 Não me lembro quando foi, mas um dia fiquei cansado de reimplementar, em Haskell, a mesma lógica clichê para rastrear múltiplos objetos sob a mesma chave. Essa estrutura de dados é conhecida por [multiset](https://en.wikipedia.org/wiki/Multiset), ou *bag* (N.T. alguns livros de estrutura de dados em Português podem traduzir para _balde_), em contraste com um *set* regular, que rastreia apenas um único objeto por chave.
 
+<!-- more -->
+
 Fiquei surpreso com a ausência de um módulo para multiset nos [`containers`](https://hackage.haskell.org/package/containers) do pacote padrão, embora seja possível implementar um multiset com base em um set, então é razoável que essa estrutura seja "supérflua". Entretanto, estava acostumado a ter a estrutura de multiset pronta, sem nenhum trabalho (mesmo que trivial), devido ao constante uso da [estrutura no C++](http://www.cplusplus.com/reference/set/multiset/), onde voltava aos anos 1990 para checar a implementação original da [Standard Template Library](https://en.wikipedia.org/wiki/Standard_Template_Library), e também a biblioteca de collections do Python possui o [`Counter`](https://docs.python.org/2/library/collections.html#collections.Counter), classe que serve para propósito similar.
 
 Hoje brevemente mostrarei um código que utiliza o `multiset` e falarei sobre por que uma estrutura assim talvez devesse estar na biblioteca padrão.
-
-<!--more-->
 
 ## O exemplo clássico de uso do multiset
 
