@@ -25,7 +25,7 @@ de Haskell na vida real.
 * **Dia 5:** [`should-not-typecheck`: Fazendo Haskell quase dinamicamente tipado com tipos de erros "deferred"](/2015/12/13/24-dias-de-hackage-2015-dia-5-should-not-typecheck-fazendo-haskell-quase-dinamicamente-tipado-com-deferred-type-errors.html)
 * **Dia 6:** [Encontrando utilitários com Hoogle e Hayoo: `MissingH`, `extra`](/2015/12/13/24-dias-de-hackage-2015-dia-6-encontrando-utilitarios-com-hoogle-e-hayoo-missingh-extra.html)
 * **Dia 7:** [`semigroups`; lista `NonEmpty` e um caso de estudo de tipos e testes](/2015/12/15/24-dias-de-hackage-2015-dia-7-semigroups-lista-nonempty-e-um-caso-de-estudo-de-tipos-e-testes.html)
-* **Dia 8:** (_não traduzido_) [`multiset`; eu queria que isso estivesse no pacote `containers` padrão]()
+* **Dia 8:** [`multiset`; eu queria que isso estivesse no pacote `containers` padrão](/2015/12/16/24-dias-de-hackage-2015-dia-8-multiset-queria-que-estivesse-na-biblioteca-padrao.html)
 * **Dia 9:** (_não traduzido_) [Template Haskell: `here`, `interpolate` e `file-embed`]()
 
 - - -
