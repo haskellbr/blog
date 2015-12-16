@@ -35,6 +35,7 @@ Temos aqui um teste (por diversão talvez você queira escrever alguns geradores
 #### (Tangenciando o dia 9)
 
 Algumas pessoas comentaram que fiz um comentário errôneo anteriormente sobre o suporte a strings em Haskell. É fato que a sintaxe do core é limitada, mas é fácil contornar isso com o Template Haskell, portanto dê uma olhada no **Dia 9** para ver como utilizá-lo. Recomendo fortemente o use de alguma das bibliotecas mencionadas.
+
 _[N.T. Post ainda não traduzido, o link real será adicionado com o tempo; veja [o artigo original para o dia 9](http://conscientiousprogrammer.com/blog/2015/12/09/24-days-of-hackage-2015-day-9-template-haskell-goodies-here-interpolate-file-embed/)]_
 
 Brevemente, a horrenda string poderia ser escrita como:
@@ -201,7 +202,7 @@ Apenas materialize o `Text` a partir do builder:
   >>> LazyBuilder.toLazyText
 {% endhighlight %}
 
-## O que devera entrar na biblioteca padrão?
+## O que deveria entrar na biblioteca padrão?
 
 Mencionei que acho que isso deveria ir para a biblioteca padrão por conveniência. O argumento para **não** colocar algo assim como padrão é sempre o de todo mundo acha que seu código super útil deveria ir para lá também, mas não há meios para isso acontecer e escolhas devem ser feitas. Dado isso, não posso discutir baseado na minha experiência e percepção próprias de que a comunidade como um todo teria benefícios se meus feitos fossem padronizados. Gostaria de pensar que temos tecnologia para coletar dados reais que determinam as necessidades concretas das pessoas e mudam o modo descobrimos e utilizamos bibliotecas. Mesmo algo como as perguntas do Stack Overflow poderiam trazer estatísticas interessantes sobre o que as pessoas necessitam. Tal coleta de dados não substituiria um especialista, claro, mas certamente seria útil.
 
