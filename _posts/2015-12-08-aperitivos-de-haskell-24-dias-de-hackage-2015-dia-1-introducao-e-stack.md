@@ -42,6 +42,7 @@ de Haskell na vida real.
 * **Dia 22:**
 * **Dia 23:**
 * **Dia 24:**
+
 - - -
 
 
