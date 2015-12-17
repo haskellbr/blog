@@ -34,9 +34,12 @@ Temos aqui um teste (por diversão talvez você queira escrever alguns geradores
 
 #### (Tangenciando o dia 9)
 
-Algumas pessoas comentaram que fiz um comentário errôneo anteriormente sobre o suporte a strings em Haskell. É fato que a sintaxe do core é limitada, mas é fácil contornar isso com o Template Haskell, portanto dê uma olhada no **Dia 9** para ver como utilizá-lo. Recomendo fortemente o use de alguma das bibliotecas mencionadas.
-
-_[N.T. Post ainda não traduzido, o link real será adicionado com o tempo; veja [o artigo original para o dia 9](http://conscientiousprogrammer.com/blog/2015/12/09/24-days-of-hackage-2015-day-9-template-haskell-goodies-here-interpolate-file-embed/)]_
+Algumas pessoas comentaram que fiz um comentário errôneo anteriormente sobre o
+suporte a strings em Haskell. É fato que a sintaxe do core é limitada, mas é
+fácil contornar isso com o Template Haskell, portanto dê uma olhada no
+[Dia 9](/2015/12/16/24-dias-de-hackage-2015-dia-9-pontos-interessantes-do-template-haskell.html)
+para ver como utilizá-lo. Recomendo fortemente o use de alguma das bibliotecas
+mencionadas.
 
 Brevemente, a horrenda string poderia ser escrita como:
 

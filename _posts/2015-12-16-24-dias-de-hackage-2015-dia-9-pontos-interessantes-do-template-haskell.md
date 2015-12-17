@@ -28,7 +28,7 @@ especialmente porque elas são implementadas no
 GHC que permite "macros para o Haskell", habilitando metaprogramação em tempo
 de compilação (veja
 [2014 Day of Hackage article about Template Haskell](https://ocharles.org.uk/blog/guest-posts/2014-12-22-template-haskell.html)). No
-[dia 2](http://blog.haskellbr.com/2015/12/09/24-dias-de-hackage-2015-dia-2-expressoes-regulares-com-pcre-heavy-scripts-standalone-usando-stack.html),
+[dia 2](/2015/12/09/24-dias-de-hackage-2015-dia-2-expressoes-regulares-com-pcre-heavy-scripts-standalone-usando-stack.html),
 apresentei um pacote que utiliza o Template Haskell; vamos continuar com isso
 no post de hoje.
 
