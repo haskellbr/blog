@@ -28,7 +28,7 @@ _s-expressions_. Apesar de que não há nada de mágico sobre _s-expressions_
 (XML, JSON ou qualquer outra representação genérica de uma estrutura de
 árvore), elas são particularmente concisas e flexíveis.
 
-<!--more-->
+<!-- more -->
 
 S-expressions são tão úteis que no meu primeiro emprego como um engenheiro de
 software nos anos 90, nós tínhamos uma biblioteca de s-expressions para C++
