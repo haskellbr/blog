@@ -187,7 +187,7 @@ preferir _s-expressions_ com a "notação polonesa reversa", somente composta de
 prefixos, da mesma forma que a comunidade de Lisp faz para evitar todas as
 desvantagens de uma sintaxe especial.
 
-### (Update of 2015-12-14) Usando `Earley` para expor uma sintaxe customizada
+### (Update 14/12/2015) Usando `Earley` para expor uma sintaxe customizada
 
 No
 [dia 14 _[N.T. não traduzido]_](http://conscientiousprogrammer.com/blog/2015/12/14/24-days-of-hackage-2015-day-14-earley-a-promising-newer-parser-library-for-haskell/),
