@@ -197,8 +197,7 @@ criei uma sintaxe customizada e um parser usando a biblioteca de parsing `Earley
 Aqui estão alguns testes de exemplo do QuickCheck para mostrar o que queremos
 ser capazes de fazer. (Note que por conveniencia, estamos usando interpolação de strings com o pacote
 [`here`](http://hackage.haskell.org/package/here) como introduzido ontem,
-[dia 9](http://conscientiousprogrammer.com/blog/2015/12/09/24-days-of-hackage-2015-day-9-template-haskell-goodies-here-interpolate-file-embed/).)
-
+[dia 9](/2015/12/16/24-dias-de-hackage-2015-dia-9-pontos-interessantes-do-template-haskell.html).)
 
 {% highlight haskell %}
 {-# LANGUAGE QuasiQuotes #-}
@@ -360,9 +359,6 @@ contextos: na minha experiência, a checagem de erros em vários níveis faz
 mensagens de erros boas mais fáceis de serem implementadas. Além disso, algo
 não discutido aqui é como _s-expressions_ podem ajudar com predicção e
 _auto-completion_.
-
-### Nota do tradutor extendida
-**TODO: Escrever e linkar post sobre quasiquoters**
 
 ## Mais notas opcionais sobre a sintaxe para DSLs
 Eu queria apontar que para muitos domínios de problemas, como esse que acontece
