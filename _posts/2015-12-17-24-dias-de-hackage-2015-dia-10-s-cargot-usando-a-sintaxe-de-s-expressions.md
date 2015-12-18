@@ -52,7 +52,7 @@ Precisamos adicionar `s-cargot` para o `stack.yaml`:
 - s-cargot-0.1.0.0
 {% endhighlight %}
 
-## The task: matemática simbólica
+## A tarefa: matemática simbólica
 A tarefa a ser resolvida aqui é, aproximadamente o suficiente, uma tradução de
 código Lisp (Scheme, para ser preciso) para um
 [diferenciador simbólico de expressões matemáticas](https://mitpress.mit.edu/sicp/full-text/book/book-Z-H-16.html#%_sec_2.3.2)
