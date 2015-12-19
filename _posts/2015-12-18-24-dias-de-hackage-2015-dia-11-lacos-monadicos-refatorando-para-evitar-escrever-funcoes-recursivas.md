@@ -23,6 +23,8 @@ baixo-nível de linguagem de montagem de programação funcional: um bloco
 fundamental para construção mas que, não necessariamente, quero ver todos os
 dias.
 
+<!-- more -->
+
 Uma analogia: programação imperativa nos anos 1960 foi alterada
 significativamente quando novas estruturas de controle como laços `for` e
 `while` modificaram sua aparência ao remover o _boilerplate_ de utilizar-se
