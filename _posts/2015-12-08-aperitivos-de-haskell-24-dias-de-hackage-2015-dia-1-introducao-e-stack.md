@@ -28,7 +28,7 @@ de Haskell na vida real.
 * **Dia 8:** [`multiset`; eu queria que isso estivesse no pacote `containers` padrão](/2015/12/16/24-dias-de-hackage-2015-dia-8-multiset-queria-que-estivesse-na-biblioteca-padrao.html)
 * **Dia 9:** [Template Haskell: `here`, `interpolate` e `file-embed`](/2015/12/16/24-dias-de-hackage-2015-dia-9-pontos-interessantes-do-template-haskell.html)
 * **Dia 10:** [`s-cargot`: Usando a sintaxe de s-expressions](/2015/12/17/24-dias-de-hackage-2015-dia-10-s-cargot-usando-a-sintaxe-de-s-expressions.html)
-* **Dia 11:** (não traduzido) monad-loops: Refatorando para evitar escrever funções recursivas
+* **Dia 11:** [`monad-loops`: Refatorando para evitar escrever funções recursivas](/2015/12/18/24-dias-de-hackage-2015-dia-11-monad-loops-refatorando-para-evitar-escrever-funcoes-recursivas.html)
 * **Dia 12:** (não traduzido) json-autotype: Inferindo tipos a partir de dados
 * **Dia 13:** (não traduzido) hint: Avaliação em runtime para Haskell
 * **Dia 14:** (não traduzido) Earley: Uma biblioteca de parsers promisora para Haskell
