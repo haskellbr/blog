@@ -19,7 +19,7 @@ O índice de toda a série está no topo do artigo para o [dia 1](/2015/12/08/ap
 
 Desgosto, frequentemente, escrever funções recursivas. Recursão é uma forma
 de `goto` e, portanto, recursão é (conceitualmente) a infraestrutura
-baixo-nível de linguagem de montagem de programação funcional: um bloco
+baixo-nível de linguagem de montagem da programação funcional: um bloco
 fundamental para construção mas que, não necessariamente, quero ver todos os
 dias.
 
@@ -106,15 +106,15 @@ dogma que foi longe demais contra o `goto`. O mesmo pode ser dito contra
 qualquer dogma anti-recursão)
 
 Quando eu ensino Haskell, me sinto envergonhado quando pessoas imaginam
-o que é tão "errado" com Haskell que você não consegue escrever código 
-tão intuitivo como o código Python acima - é necessário usar a tal da recursão
-para fazer algo tão simples. O dilema que enfrento ao ensinar é o
-pensamento na minha mente "Mas, mas, você também pode ter laços de repetição,
-eles só não foram embutidos na linguagem e pode até escrever seus próprios
-usando funções de alta ordem!", enquanto eu sei que muitos estão pensando "Mas
-que porcaria de linguagem acadêmica, torre de marfim, imprática, ela nem ao
-menos tem laços" e, enquanto isso, sei que não posso me precipitar para
-funções de alta ordem na primeira hora.
+o que há de tão "errado" com Haskell que você não consegue escrever código tão
+intuitivo como o código Python acima - é necessário usar a tal da recursão para
+fazer algo tão simples. O dilema que enfrento ao ensinar é o pensamento na
+minha mente "Mas, mas, você também pode ter laços de repetição, eles só não
+foram embutidos na linguagem e pode até escrever seus próprios usando funções
+de alta ordem!", enquanto eu sei que muitos estão pensando "Mas que porcaria de
+linguagem acadêmica, torre de marfim, imprática, ela nem ao menos tem laços" e,
+enquanto isso, sei que não posso me precipitar para funções de alta ordem na
+primeira hora.
 
 
 ### Fazendo seu próprio laço
