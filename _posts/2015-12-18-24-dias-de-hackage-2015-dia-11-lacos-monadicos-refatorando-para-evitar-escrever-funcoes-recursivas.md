@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "24 dias de Hackage, 2015 - dia 11 - Laços Monádicos: Refatorando para evitar escrever funções recursivas
+title: "24 dias de Hackage, 2015 - dia 11 - Laços Monádicos: Refatorando para evitar escrever funções recursivas"
 author: Franklin Chen
 author_url: "http://conscientiousprogrammer.com/"
 translator: Lucas Tadeu Teixeira
@@ -56,7 +56,7 @@ Vamos escrever uma função que simula o processo de _login_ de um usuário, no 
 Abaixo está a tradução literal do pseudocódigo para Haskell, usando recursão para
 o laço:
 
-```Haskell
+{% highlight haskell %}
 logIn :: IO ()
 logIn = do
   putStrLn "% Digite a senha:"
@@ -74,7 +74,7 @@ logIn = do
           go
         else
           return ()
-```
+{% endhighlight %}
 
 Você gosta deste código? Eu me irrito com o fato de precisar escrever uma
 função recursiva apenas para fazer um laço de repetição.
@@ -85,14 +85,14 @@ função recursiva apenas para fazer um laço de repetição.
 
 Compare com um código Python típico:
 
-```Python
+{% highlight Python %}
 def log_in():
   print "% Digite a senha"
   while raw_input() != 'segredo:
     print "% Senha incorreta!"
     print "% Tente novamente:"
   print "% Parabéns!"
-```
+{% endhighlight %}
 
 Há um motivo pelo qual [laços de repetição
 `while`](https://en.wikipedia.org/wiki/While_loop) foram criados nos anos 1960
@@ -130,15 +130,15 @@ dois componentes:
 `monad-loops` provê diversos combinadores úteis para capturar padrões de fluxo
 de controle comuns. Por exemplo, podemos usar a função `whileM_` em nosso problema:
 
-```Haskell
+{% highlight haskell %}
 import Control.Monad.Loops (whileM_)
-```
+{% endhighlight %}
 
 O tipo de `whileM_` é:
 
-```Haskell
+{% highlight haskell %}
 whileM_ :: Monad m => m Bool -> m a -> m ()
-```
+{% endhighlight %}
 
 É necessária uma "condição" que avalia um `Bool` (em um contexto monádico `m`),
 em conjunto com um "corpo" monádico arbitrário contendo uma ação a ser executada,
@@ -147,7 +147,7 @@ testando a "condição" e executando o "corpo".
 
 Nosso código reescrito:
 
-```Haskell
+{% highlight haskell %}
 -- | Sem recursão explícita
 logIn2 :: IO ()
 logIn2 = do
@@ -160,7 +160,7 @@ logIn2 = do
                putStrLn "% Tente novamente:"
             )
   putStrLn "$ Parabéns!"
-```
+{% endhighlight %}
 
 Isso tem uma aparência muito melhor que a recursão explícita, exceto pela
 sintaxe estranha porque a "condição" e o "corpo" de nosso laço são apenas
@@ -172,7 +172,7 @@ Note que [a implementação da `whileM_`](https://hackage.haskell.org/package/mo
 original, extraindo a "condição" e o "corpo" de dentro da função. Programação
 funcional tem tudo a ver com ["extract method"](http://refactoring.com/catalog/extractMethod.html)!
 
-```Haskell
+{% highlight haskell %}
 whileM_ :: (Monad m) => m Bool -> m a -> m ()
 whileM_ p f = go
     where go = do
@@ -180,7 +180,7 @@ whileM_ p f = go
             if x
                 then f >> go
                 else return ()
-```
+{% endhighlight %}
 
 #### Melhorando a sintaxe
 
@@ -195,7 +195,7 @@ O primeiro passo para evitar o uso excessivo de parênteses para envolver as
 expressões é utilizar o operador de aplicação de função `$`, um truque que permite
 remover os parênteses da expressão final (o que funciona como o "corpo" do laço):
 
-```Haskell
+{% highlight haskell %}
 -- | With $ syntax.
 logIn3 :: IO ()
 logIn3 = do
@@ -207,13 +207,13 @@ logIn3 = do
     putStrLn "% Senha incorreta!"
     putStrLn "% Tente novamente:"
   putStrLn "$ Parabéns!"
-```
+{% endhighlight %}
 
 
 Outro passo é elevar (_lift_) as operações para dentro da mônada utilizando
 `liftM`:
 
-```Haskell
+{% highlight haskell %}
 import Control.Monad (liftM)
 
 -- | With lifting.
@@ -224,14 +224,14 @@ logIn4 = do
     putStrLn "% Senha incorreta!"
     putStrLn "% Tente novamente:"
   putStrLn "$ Parabéns!"
-```
+{% endhighlight %}
 
 O preço é que você precisa entender a elevação (_lifiting_) e o operador `$`.
 
 Se você estiver disposto a pagar outro custo, o de utilizar secionamento de
 operadores e o operador `fmap` simbólico `<$>`, aqui está a versão final:
 
-```Haskell
+{% highlight haskell %}
 -- | With operator sectioning and <$>.
 logIn5 :: IO ()
 logIn5 = do
@@ -240,7 +240,7 @@ logIn5 = do
     putStrLn "% Senha incorreta!"
     putStrLn "% Tente novamente:"
   putStrLn "$ Parabéns!"
-```
+{% endhighlight %}
 
 Isso se parece muito com o código Python, exceto pelo fato de estar
 cheio de sintaxe que parece bastante misteriosa para um novato em
@@ -255,29 +255,29 @@ de linha de comando, que lê linhas de entrada fornecidas pelo usuário até
 encontrar `quit`; e você quer coletar  todas essas linhas (mas não o
 `quit`) em uma lista:
 
-```Haskell
+{% highlight haskell %}
 readLinesUntilQuit :: IO [String]
-```
+{% endhighlight %}
 
 Um exemplo de uma sessão interativa:
 
-```
+{% highlight console %}
 > readLinesUntilQuit
 hello
 lovely
 world!
 quit
-```
+{% endhighlight %}
 
 Resultado:
 
-```Haskell
+{% highlight haskell %}
 ["hello","lovely","world!"]
-```
+{% endhighlight %}
 
 Aqui está uma implementação intuitiva, utilizando recursão:
 
-```Haskell
+{% highlight haskell %}
 readLinesUntilQuit :: IO [String]
 readLinesUntilQuit = do
   line <- getLine
@@ -287,7 +287,7 @@ readLinesUntilQuit = do
       restOfLines <- readLinesUntilQuit
       return (line : restOfLines)
     else return []
-```
+{% endhighlight %}
 
 O código anterior não é ilegível mas, definitivamente, há bastante
 _boilerplate_ presente:
@@ -300,14 +300,14 @@ _boilerplate_ presente:
 
 Vamos usar `unfoldM`:
 
-```Haskell
+{% highlight haskell %}
 unfoldM :: Monad m => m (Maybe a) -> m [a]
-```
+{% endhighlight %}
 
 Todo o trabalho é realizado no argumento, o qual nós extraímos
 em sua própria definição:
 
-```Haskell
+{% highlight haskell %}
 -- | Sem recursão explícita
 readLinesUntilQuit2 :: IO [String]
 readLinesUntilQuit2 = unfoldM maybeReadLine
@@ -319,7 +319,7 @@ maybeReadLine = do
   return (if line /= "quit"
           then Just line
           else Nothing)
-```
+{% endhighlight %}
 
 Podemos avançar ainda mais nesta refatoração, porque `maybeReadLine`
 mistura ambos `IO` e uma verificação de condição pura com a
@@ -327,7 +327,7 @@ linha de entrada. **Expressões envolvidas em parênteses,
 frequentemente, são sinais que indicam uma oportunidade de
 refatoração.**
 
-```Haskell
+{% highlight haskell %}
 readLinesUntilQuit3 :: IO [String]
 readLinesUntilQuit3 = unfoldM (notQuit <$> getLine)
 
@@ -336,7 +336,7 @@ notQuit line =
   if line /= "quit"
     then Just line
     else Nothing
-```
+{% endhighlight %}
 
 Gosto desta última versão porque ela desacopla o laço, a condição
 e a ação fundametal `IO` trazendo mais informação a ser utilizada.
