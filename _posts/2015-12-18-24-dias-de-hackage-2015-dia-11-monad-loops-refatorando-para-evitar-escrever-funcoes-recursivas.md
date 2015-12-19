@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "24 dias de Hackage, 2015 - dia 11 - Laços Monádicos: Refatorando para evitar escrever funções recursivas"
+title: "24 dias de Hackage, 2015 - dia 11 - monad-loops: Refatorando para evitar escrever funções recursivas"
 author: Franklin Chen
 author_url: "http://conscientiousprogrammer.com/"
 translator: Lucas Tadeu Teixeira
