@@ -34,9 +34,9 @@ de Haskell na vida real.
 * **Dia 14:** (não traduzido) Earley: Uma biblioteca de parsers promisora para Haskell
 * **Dia 15:** (não traduzido) IOSpec: Testando IO e algumas dicas para o QuickCheck
 * **Dia 16:** (não traduzido) safe; o que é segurança mesmo?
-* **Dia 17:**
-* **Dia 18:**
-* **Dia 19:**
+* **Dia 17:** (não traduzido) ansi-wl-pprint: Evitando hackear com strings
+* **Dia 18:** (não traduzido) vector, vector-algorithms: Libere seu alter-programador C
+* **Dia 19:** (não traduzido) ghc-core-html, list-fusion-probe: As regras de reescrita do GHC que excluem estruturas de dados intermediários
 * **Dia 20:**
 * **Dia 21:**
 * **Dia 22:**
