@@ -47,8 +47,8 @@ Eu salvei um pequeno documento JSON,
 `pittsburgh-code-and-supply-events.json` de uma query para a API de eventos do
 Meetup.
 
-A forma ais fácil de usar o `json-autotype` é usar sua ferramenta de linha de
-comando, instalando ela globalmente antes de qualquer outra coisa.
+A forma mais fácil de usar o `json-autotype` é usar sua ferramenta de linha de
+comando, a instalando globalmente antes de qualquer outra coisa.
 
 {% highlight console %}
 $ stack install json-autotype
@@ -215,7 +215,7 @@ extractEventInfo event =
 De novo, nós só usamos os campos tipados de `Meetup.ResultsElt`, ao invés de
 strings como chaves em um objeto.
 
-Finalments, indo até o talo tentando extrair o nome do local a partir do objeto
+Finalmente, indo até o talo tentando extrair o nome do local a partir do objeto
 do local de um evento:
 
 {% highlight haskell %}
@@ -231,7 +231,7 @@ extractVenueName (Just (AltRight jsonValues)) =
 Aqui nós percebemos que talvez não haja nenhum local ou que o campo de JSON
 `venue` não corresponda ao tipo de dados `Venue`. Na prática, reconhecer esse
 fato pode resultar em nós mudarmos o nosso tipo `EventInfo` para que ele não
-assuma que tem um `Text` como seu `venueName`, mas aqui e agora, nós só ficamos
+assuma que tem um `Text` como seu `venueName`, mas aqui e agora nós só ficamos
 no mundo _"tipado por strings"_ e tentamos retornar uma string útil em todos os
 casos.
 
@@ -251,14 +251,14 @@ ecossistemas de linguagens mais tipadas. Por exemplo, existe uma biblioteca de
 [_provedores de tipos_ para Idris](https://github.com/david-christiansen/idris-type-providers).
 
 Eu desconheço quanto trabalho existe em um ecossistema de _provedores de tipos_
-para Haskell, mas eu imagino que você poderia usar Templaste Haskell para, por
-exemplo, automatizar um pouco do que fizémos aqui com o `json-autotype` como
+para Haskell, mas eu imagino que você poderia usar Template Haskell para, por
+exemplo, automatizar um pouco do que fizemos aqui com o `json-autotype` como
 uma forma crua de um _provedor de tipos_.
 
 ## Conclusão
 `json-autotype` é uma boa biblioteca que ajuda em entender o JSON que aparece
-no seu caminho, mas sem um conjunto de tipos especificado já definidos. Ele
-infere os tipos e escreve um módulo de Haskell automaticamete.
+no seu caminho, mas sem um conjunto de tipos já especificado. Ele infere os
+tipos e escreve um módulo de Haskell automaticamete.
 
 ## Todo o código
 Todo o código para a série estará [nesse repositório do GitHub](https://github.com/FranklinChen/twenty-four-days2015-of-hackage).
