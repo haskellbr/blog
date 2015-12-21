@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "24 dias de Hackage 2015: dia 12: json-autotype: Inferindo tipos a partir de dados"
+title: "24 dias de Hackage 2015 - dia 12 - json-autotype: Inferindo tipos a partir de dados"
 author: Franklin Chen
 author_url: "http://conscientiousprogrammer.com/"
 translator: Pedro Yamada

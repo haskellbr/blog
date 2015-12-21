@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "24 dias de Hackage 2015 - Dia 13 - hint: Avaliação em runtime para Haskell"
+title: "24 dias de Hackage 2015 - dia 13 - hint: Avaliação em runtime para Haskell"
 author: Franklin Chen
 author_url: "http://conscientiousprogrammer.com/"
 translator: Pedro Yamada
