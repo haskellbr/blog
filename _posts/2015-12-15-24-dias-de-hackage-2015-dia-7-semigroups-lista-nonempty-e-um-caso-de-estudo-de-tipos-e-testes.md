@@ -209,10 +209,8 @@ foi coberta
 [em um Dia de Extensões do GHC de 2014](https://ocharles.org.uk/blog/guest-posts/2014-12-20-scoped-type-variables.html).)
 
 ### (Update de 2015-12-14) Usando `NonEmpty` para um parser
-No **dia 14** eu usei o `NonEmpty` para representar de forma fundamentada o
+No [dia 14](/2015/12/21/24-dias-de-hackage-2015-dia-14-earley-uma-biblioteca-de-parsers-promisora-para-haskell.html) eu usei o `NonEmpty` para representar de forma fundamentada o
 resultado de um parser.
-
-_[N.T. Post ainda não traduzido, o link real será adicionado com o tempo; veja [o artigo original para o dia 14](http://conscientiousprogrammer.com/blog/2015/12/14/24-days-of-hackage-2015-day-14-earley-a-promising-newer-parser-library-for-haskell/)]_,
 
 ## Algumas notas na API completa do `NonEmpty`
 O `map` se comporta como esperado, porque ele não precisa mudar o número de

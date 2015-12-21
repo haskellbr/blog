@@ -190,7 +190,7 @@ desvantagens de uma sintaxe especial.
 ### (Update 14/12/2015) Usando `Earley` para expor uma sintaxe customizada
 
 No
-[dia 14 _[N.T. não traduzido]_](http://conscientiousprogrammer.com/blog/2015/12/14/24-days-of-hackage-2015-day-14-earley-a-promising-newer-parser-library-for-haskell/),
+[dia 14](/2015/12/21/24-dias-de-hackage-2015-dia-14-earley-uma-biblioteca-de-parsers-promisora-para-haskell.html),
 criei uma sintaxe customizada e um parser usando a biblioteca de parsing `Earley`.
 
 ### Testes do QuickCheck

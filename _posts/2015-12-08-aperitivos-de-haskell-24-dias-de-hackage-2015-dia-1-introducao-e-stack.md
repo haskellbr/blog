@@ -31,7 +31,7 @@ de Haskell na vida real.
 * **Dia 11:** [`monad-loops`: Refatorando para evitar escrever funções recursivas](/2015/12/18/24-dias-de-hackage-2015-dia-11-monad-loops-refatorando-para-evitar-escrever-funcoes-recursivas.html)
 * **Dia 12:** [`json-autotype`: Inferindo tipos a partir de dados](/2015/12/20/24-dias-de-hackage-2015-dia-12-json-autotype-infering-tipos-a-partir-de-dados.html)
 * **Dia 13:** [`hint`: Avaliação em runtime para Haskell](/2015/12/20/24-dias-de-hackage-2015-dia-13-hint-avaliacao-em-runtime-para-haskell.html)
-* **Dia 14:** [(não traduzido) Earley: Uma biblioteca de parsers promisora para Haskell](https://github.com/haskellbr/blog/issues/15)
+* **Dia 14:** [`Earley`: Uma biblioteca de parsers promisora para Haskell](/2015/12/21/24-dias-de-hackage-2015-dia-14-earley-uma-biblioteca-de-parsers-promisora-para-haskell.html)
 * **Dia 15:** [(não traduzido - clique e ajude!) IOSpec: Testando IO e algumas dicas para o QuickCheck](https://github.com/haskellbr/blog/issues/16)
 * **Dia 16:** [(não traduzido - clique e ajude!) safe; o que é segurança mesmo?](https://github.com/haskellbr/blog/issues/21)
 * **Dia 17:** [(não traduzido - clique e ajude!) ansi-wl-pprint: Evitando hackear com strings](https://github.com/haskellbr/blog/issues/22)
