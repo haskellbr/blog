@@ -1,12 +1,38 @@
 /* Link colour */
 a {
-    color: #7313A0;
+    color: #3496a8;
 }
 
 /* Border at the top of the page */
 body>header,
 body.noimage {
-    border-color: #7313A0;
+    border-color: #3496a8;
+}
+
+.site-title {
+  color: #666666;
+  font-family: 'Ubuntu';
+  font-weight: bolder;
+}
+
+.site-title:hover {
+  color: #666666;
+}
+
+.site-title img {
+  height: 38px;
+  position: relative;
+  top: 2px;
+  left: 9px;
+  margin-left: -13px;
+}
+
+.site-title .subtitle {
+  color: rgba(102, 102, 102, 0.61);
+}
+
+.site-title .title-green {
+  color: #85d689;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -59,38 +85,7 @@ body {
     font-family: "Open Sans", "Helvetica Neue", "Helvetica-Neue", helvetica, sans-serif
 }
 body .btn, body>header h1, body article header h1, body>footer .details h4, body .post-footer .details h4, body #share_modal header a.close, body.user article.feature h1 a {
-    font-family: "Open Sans", "Helvetica Neue", "Helvetica-Neue", helvetica, sans-serif
-}
-body.serif {
-    font-family: "Merriweather", "Georgia", "Times New Roman", serif
-}
-body.serif>header h1, body.serif>footer, body.serif>footer h4, body.serif #post_nav {
-    font-family: "Merriweather", "Georgia", "Times New Roman", serif
-}
-body.serif>a.btn.nav {
-    font-family: "Merriweather", "Georgia", "Times New Roman", serif;
-    padding-top: 16px;
-    padding-bottom: 14px
-}
-body.serif>a.btn.nav.next span {
-    margin-top: 2px
-}
-body.serif article time, body.serif article>.meta, body.serif article>header h1, body.serif article>header .count, body.serif article.feature h1 a, body.serif .post-footer, body.serif .post-footer h4 {
-    font-family: "Merriweather", "Georgia", "Times New Roman", serif
-}
-body.serif article .text {
-    font-family: "Merriweather", "Georgia", "Times New Roman", serif;
-    font-size: 17px
-}
-body.serif article .text blockquote {
-    font-family: "Merriweather", "Georgia", "Times New Roman", serif
-}
-body.serif article>menu #btn_comment {
-    font-family: "Merriweather", "Georgia", "Times New Roman", serif;
-    font-size: 13px
-}
-body.serif article>menu #btn_comment span {
-    padding-top: 5px
+    font-family: "Ubuntu", "Helvetica Neue", "Helvetica-Neue", helvetica, sans-serif
 }
 .highlight .c {
     color: #8e908c
@@ -102,7 +97,7 @@ body.serif article>menu #btn_comment span {
     color: #b168cd
 }
 .highlight .l {
-    color: #7313A0
+    color: #3496a8
 }
 .highlight .n {
     color: #21272d
@@ -171,7 +166,7 @@ body.serif article>menu #btn_comment span {
     color: #46ad55
 }
 .highlight .m {
-    color: #7313A0
+    color: #3496a8
 }
 .highlight .s {
     color: #46ad55
@@ -186,7 +181,7 @@ body.serif article>menu #btn_comment span {
     color: #deb328
 }
 .highlight .no {
-    color: #7313A0
+    color: #3496a8
 }
 .highlight .nd {
     color: #51bac8
@@ -225,16 +220,16 @@ body.serif article>menu #btn_comment span {
     color: #4d4d4c
 }
 .highlight .mf {
-    color: #7313A0
+    color: #3496a8
 }
 .highlight .mh {
-    color: #7313A0
+    color: #3496a8
 }
 .highlight .mi {
-    color: #7313A0
+    color: #3496a8
 }
 .highlight .mo {
-    color: #7313A0
+    color: #3496a8
 }
 .highlight .sb {
     color: #46ad55
@@ -249,13 +244,13 @@ body.serif article>menu #btn_comment span {
     color: #46ad55
 }
 .highlight .se {
-    color: #7313A0
+    color: #3496a8
 }
 .highlight .sh {
     color: #46ad55
 }
 .highlight .si {
-    color: #7313A0
+    color: #3496a8
 }
 .highlight .sx {
     color: #46ad55
@@ -282,7 +277,7 @@ body.serif article>menu #btn_comment span {
     color: #c82829
 }
 .highlight .il {
-    color: #7313A0
+    color: #3496a8
 }
 html, body {
     height: 100%;
@@ -503,7 +498,7 @@ article .text pre {
     max-width: 100%;
     overflow-x: auto;
     line-height: 1.4em;
-    font-family: "Courier New", "Courier", monospace;
+    font-family: "Ubuntu Mono", "Courier New", "Courier", monospace;
     -webkit-font-smoothing: subpixel-antialiased;
     border: 1px solid #ededee;
     background-color: #f9f9fa;
@@ -530,7 +525,7 @@ article .text code {
     overflow-x: auto;
     padding: 0 5px;
     font-size: 16px;
-    font-family: "Courier New", "Courier", monospace;
+    font-family: "Ubuntu Mono", "Courier New", "Courier", monospace;
     -webkit-font-smoothing: subpixel-antialiased;
     border: 1px solid #ededee;
     background-color: #f9f9fa;
@@ -771,7 +766,7 @@ body.user>header h1 {
     font-weight: normal
 }
 body.user>header hr {
-    margin: 0 25%
+    margin: 0;
 }
 body.user article {
     position: relative;
@@ -1403,16 +1398,24 @@ body.touch.user article .readmore {
         height: auto;
         padding-top: 65%
     }
+
     body>header h1 {
         padding: 48px 20px 40px 20px;
-        font-size: 28px
+        font-size: 28px;
     }
+
+    body>header h1 .site-title img {
+      height: 28px;
+    }
+
     body.user>header {
         margin-bottom: 65px
     }
+
     body.user>header h1 {
         padding-top: 70px
     }
+
     body.user article:first-of-type {
         margin-top: 60px
     }
@@ -1665,7 +1668,7 @@ input:active {
 }
 
 input + button {
-  background-color: #7313A0;
+  background-color: #3496a8;
   border: solid 1px #ccc;
   border-radius: 50px;
   color: white;

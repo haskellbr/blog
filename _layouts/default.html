@@ -7,7 +7,6 @@
 
     {{ content }}
 
-    {{ if site.logo}}
     <a href="{{ site.baseurl | prepend: site.url }}" id="blog_badge">
       <span style="background-image: url('{{ site.baseurl }}/assets/images/{{ site.logo }}');">
         {{ site.name }}
@@ -19,7 +18,6 @@
       <script async defer src="http://haskellbr.com/slack/slackin.js"></script>
       <iframe src="https://ghbtns.com/github-btn.html?user=haskellbr&repo=blog&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
     </div>
-    {{/if}}
 
     <script>
       function no_schema_links () {
