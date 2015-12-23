@@ -11,8 +11,8 @@ body.noimage {
 
 .site-title {
   color: #666666;
-  font-family: "Ubuntu", "Helvetica Neue", "Helvetica-Neue", helvetica, sans-serif
-  font-weight: bolder;
+  font-family: "Ubuntu", "Helvetica Neue", "Helvetica-Neue", helvetica, sans-serif;
+  font-weight: 700;
 }
 
 .site-title:hover {
