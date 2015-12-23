@@ -11,7 +11,7 @@ body.noimage {
 
 .site-title {
   color: #666666;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu", "Helvetica Neue", "Helvetica-Neue", helvetica, sans-serif
   font-weight: bolder;
 }
 
@@ -84,9 +84,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
     font-family: "Open Sans", "Helvetica Neue", "Helvetica-Neue", helvetica, sans-serif
 }
+
 body .btn, body>header h1, body article header h1, body>footer .details h4, body .post-footer .details h4, body #share_modal header a.close, body.user article.feature h1 a {
     font-family: "Ubuntu", "Helvetica Neue", "Helvetica-Neue", helvetica, sans-serif
 }
+
 .highlight .c {
     color: #8e908c
 }
@@ -452,6 +454,7 @@ article .text {
     word-wrap: break-word
 }
 article .text p, article .text pre, article .text img, article .text ol, article .text ul, article .text table, article .text dl, article .text hr, article .text blockquote {
+    font-family: "Merriweather", "Georgia", "Times New Roman", serif;
     margin-bottom: 30px;
     text-align: left
 }
@@ -882,9 +885,9 @@ body.user article .text {
     max-width: 680px
 }
 body.user article .text p {
-    display: inline;
-    line-height: 1.7em;
-    margin: 0 5px 0 0
+  display: inline;
+  line-height: 1.7em;
+  margin: 0 5px 0 0
 }
 body.user article .text pre, body.user article .text img, body.user article .text table, body.user article .text hr, body.user article .text iframe, body.user article .text object, body.user article .text audio, body.user article .text video, body.user article .text embed, body.user article .text h1, body.user article .text h2, body.user article .text h3, body.user article .text h4, body.user article .text h5, body.user article .text h6, body.user article .text div.gist {
     display: none !important
