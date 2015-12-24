@@ -37,10 +37,10 @@ de Haskell na vida real.
 * **Dia 17:** [(não traduzido - clique e ajude!) `ansi-wl-pprint`: Evitando hackear com strings](https://github.com/haskellbr/blog/issues/22)
 * **Dia 18:** [(não traduzido - clique e ajude!) `vector`, `vector-algorithms`: Libere seu alter-programador C](https://github.com/haskellbr/blog/issues/23)
 * **Dia 19:** [(não traduzido - clique e ajude!) `ghc-core-html`, `list-fusion-probe`: As regras de reescrita do GHC que excluem estruturas de dados intermediários](https://github.com/haskellbr/blog/issues/24)
-* **Dia 20:**
-* **Dia 21:**
-* **Dia 22:**
-* **Dia 23:**
+* **Dia 20:** [(não traduzido - clique e ajude!) `dimensional`: Computação segura sobre quantidades físicas com unidades](https://github.com/haskellbr/blog/issues/25)
+* **Dia 21:** [(não traduzido - clique e ajude!) `hood`, `GHood`, `Hoed`: Debugging orientado à observação no Haskell](https://github.com/haskellbr/blog/issues/26)
+* **Dia 22:** [(não traduzido - clique e ajude!) `Shake`: O build system dinâmico](https://github.com/haskellbr/blog/issues/27)
+* **Dia 23:** [(não traduzido - clique e ajude!) Liquid Haskell: Refinamento de tipos no mundo real](https://github.com/haskellbr/blog/issues/28)
 * **Dia 24:**
 
 - - -
