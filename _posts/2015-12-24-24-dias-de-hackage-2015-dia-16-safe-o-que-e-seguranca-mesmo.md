@@ -31,7 +31,7 @@ Isso é uma coisa boa, certo? Afinal, no
 [dia 7](/2015/12/15/24-dias-de-hackage-2015-dia-7-semigroups-lista-nonempty-e-um-caso-de-estudo-de-tipos-e-testes.html),
 eu promovi o uso da lista `NonEmpty` e de novo a usei no
 [dia 14](/2015/12/21/24-dias-de-hackage-2015-dia-14-earley-uma-biblioteca-de-parsers-promisora-para-haskell.html).
-Eu gosto de segurança, mas o que é "segurança mesmo"?
+Eu gosto de segurança, mas o que é "segurança" mesmo?
 
 <!-- more -->
 
