@@ -8,7 +8,7 @@ translator_url: "https://github.com/yamadapc"
 excerpt_separator: "<!-- more -->"
 ---
 _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
-[Ler original](http://conscientiousprogrammer.com/blog/2015/11/30/haskell-tidbits-24-days-of-hackage-2015-day-1-introduction-and-stack/)_
+[Ler original.](http://conscientiousprogrammer.com/blog/2015/11/30/haskell-tidbits-24-days-of-hackage-2015-day-1-introduction-and-stack/)_
 
 Nessa série de posts traduzidos "24 dias de Hackage, 2015", caminhamos por
 uma série de módulos publicados no ecossistema da linguagem de programação

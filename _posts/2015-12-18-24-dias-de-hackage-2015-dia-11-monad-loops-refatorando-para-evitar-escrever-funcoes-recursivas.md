@@ -8,7 +8,7 @@ translator_url: "https://github.com/lucastadeu"
 excerpt_separator: "<!-- more -->"
 ---
 Esse é um artigo escrito por Franklin Chen e traduzido para o português.
-[Ler original](http://conscientiousprogrammer.com/blog/2015/12/11/24-days-of-hackage-2015-day-11-monad-loops-avoiding-writing-recursive-functions-by-refactoring/)_
+[Ler original.](http://conscientiousprogrammer.com/blog/2015/12/11/24-days-of-hackage-2015-day-11-monad-loops-avoiding-writing-recursive-functions-by-refactoring/)_
 
 ## Índice de toda a série
 O índice de toda a série está no topo do artigo para o [dia 1](/2015/12/08/aperitivos-de-haskell-24-dias-de-hackage-2015-dia-1-introducao-e-stack.html).

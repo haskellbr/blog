@@ -7,7 +7,7 @@ translator: Hanneli T.
 translator_url: "https://github.com/hannelita"
 ---
 _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
-[Ler original](http://conscientiousprogrammer.com/blog/2015/12/09/24-days-of-hackage-2015-day-9-template-haskell-goodies-here-interpolate-file-embed/)_
+[Ler original.](http://conscientiousprogrammer.com/blog/2015/12/09/24-days-of-hackage-2015-day-9-template-haskell-goodies-here-interpolate-file-embed/)_
 
 ## Índice de toda a série
 O índice de toda a série está no topo do artigo para o

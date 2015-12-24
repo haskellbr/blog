@@ -7,7 +7,7 @@ translator: Hanneli T.
 translator_url: "https://github.com/hannelita"
 ---
 _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
-[Ler original](http://conscientiousprogrammer.com/blog/2015/12/08/24-days-of-hackage-2015-day-8-multiset-i-wish-this-were-in-the-standard-containers-package/)_
+[Ler original.](http://conscientiousprogrammer.com/blog/2015/12/08/24-days-of-hackage-2015-day-8-multiset-i-wish-this-were-in-the-standard-containers-package/)_
 
 ## Índice de toda a série
 O índice de toda a série está no topo do artigo para o [dia 1](/2015/12/08/aperitivos-de-haskell-24-dias-de-hackage-2015-dia-1-introducao-e-stack.html).
