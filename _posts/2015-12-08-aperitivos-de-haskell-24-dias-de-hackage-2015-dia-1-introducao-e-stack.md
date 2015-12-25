@@ -34,7 +34,7 @@ de Haskell na vida real.
 * **Dia 14:** [`Earley`: Uma biblioteca de parsers promisora para Haskell](/2015/12/21/24-dias-de-hackage-2015-dia-14-earley-uma-biblioteca-de-parsers-promisora-para-haskell.html)
 * **Dia 15:** [`IOSpec`: Testando IO e algumas dicas para o QuickCheck](/2015/12/23/24-dias-de-hackage-2015-dia-15-iospec-testando-io-e-algumas-dicas-para-o-quickcheck.html)
 * **Dia 16:** [`safe`; o que é segurança mesmo?](/2015/12/24/24-dias-de-hackage-2015-dia-16-safe-o-que-e-seguranca-mesmo.html)
-* **Dia 17:** [(não traduzido - clique e ajude!) `ansi-wl-pprint`: Evitando hackear com strings](https://github.com/haskellbr/blog/issues/22)
+* **Dia 17:** [`ansi-wl-pprint`: Evitando hackear com strings](/2015/12/25/24-dias-de-hackage-2015-dia-17-ansi-wl-pprint-evitando-hackear-com-strings.html)
 * **Dia 18:** [(não traduzido - clique e ajude!) `vector`, `vector-algorithms`: Libere seu alter-programador C](https://github.com/haskellbr/blog/issues/23)
 * **Dia 19:** [(não traduzido - clique e ajude!) `ghc-core-html`, `list-fusion-probe`: As regras de reescrita do GHC que excluem estruturas de dados intermediários](https://github.com/haskellbr/blog/issues/24)
 * **Dia 20:** [(não traduzido - clique e ajude!) `dimensional`: Computação segura sobre quantidades físicas com unidades](https://github.com/haskellbr/blog/issues/25)
