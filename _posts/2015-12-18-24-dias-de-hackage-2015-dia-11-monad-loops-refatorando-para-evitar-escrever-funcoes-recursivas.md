@@ -7,7 +7,7 @@ translator: Lucas Tadeu Teixeira
 translator_url: "https://github.com/lucastadeu"
 excerpt_separator: "<!-- more -->"
 ---
-Esse é um artigo escrito por Franklin Chen e traduzido para o português.
+_Esse é um artigo escrito por Franklin Chen e traduzido para o português.
 [Ler original.](http://conscientiousprogrammer.com/blog/2015/12/11/24-days-of-hackage-2015-day-11-monad-loops-avoiding-writing-recursive-functions-by-refactoring/)_
 
 ## Índice de toda a série
