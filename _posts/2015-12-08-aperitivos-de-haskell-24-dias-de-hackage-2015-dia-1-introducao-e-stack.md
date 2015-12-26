@@ -36,7 +36,7 @@ de Haskell na vida real.
 * **Dia 16:** [`safe`; o que é segurança mesmo?](/2015/12/24/24-dias-de-hackage-2015-dia-16-safe-o-que-e-seguranca-mesmo.html)
 * **Dia 17:** [`ansi-wl-pprint`: Evitando hackear com strings](/2015/12/25/24-dias-de-hackage-2015-dia-17-ansi-wl-pprint-evitando-hackear-com-strings.html)
 * **Dia 18:** [`vector`, `vector-algorithms`: Libere seu alter-programador C](/2015/12/25/24-dias-de-hackage-2015-dia-18-vector-vector-algorithms-libere-seu-alter-programador-c.html)
-* **Dia 19:** [(não traduzido - clique e ajude!) `ghc-core-html`, `list-fusion-probe`: As regras de reescrita do GHC que excluem estruturas de dados intermediários](https://github.com/haskellbr/blog/issues/24)
+* **Dia 19:** [`ghc-core-html`, `list-fusion-probe`: As regras de reescrita do GHC que excluem estruturas de dados intermediários](/2015/12/26/24-dias-de-hackage-2015-dia-19-ghc-core-html-list-fusion-probe-as-regras-de-reescrita-do-ghc-que-excluem-estruturas-de-dados-intermediarias.html)
 * **Dia 20:** [(não traduzido - clique e ajude!) `dimensional`: Computação segura sobre quantidades físicas com unidades](https://github.com/haskellbr/blog/issues/25)
 * **Dia 21:** [(não traduzido - clique e ajude!) `hood`, `GHood`, `Hoed`: Debugging orientado à observação no Haskell](https://github.com/haskellbr/blog/issues/26)
 * **Dia 22:** [(não traduzido - clique e ajude!) `Shake`: O build system dinâmico](https://github.com/haskellbr/blog/issues/27)
