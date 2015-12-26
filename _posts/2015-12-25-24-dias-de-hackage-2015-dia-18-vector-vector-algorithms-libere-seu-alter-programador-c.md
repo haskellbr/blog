@@ -8,7 +8,7 @@ translator_url: "https://github.com/yamadapc"
 excerpt_separator: "<!-- more -->"
 ---
 _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
-[Ler original.](http://conscientiousprogrammer.com/blog/2015/11/30/haskell-tidbits-24-days-of-hackage-2015-day-1-introduction-and-stack/)_
+[Ler original.](http://conscientiousprogrammer.com/blog/2015/12/18/24-days-of-hackage-2015-day-18-vector-vector-algorithms-unleash-your-inner-c-programmer/)_
 
 ## Encontro HaskellBR São Paulo
 [Vamos nos encontrar em São Paulo em 25 de Janeiro de 2016. Marque sua presença
