@@ -10,6 +10,10 @@ excerpt_separator: "<!-- more -->"
 _Esse é um artigo escrito por Franklin Chen e traduzido para o português.
 [Ler original.](http://conscientiousprogrammer.com/blog/2015/11/30/haskell-tidbits-24-days-of-hackage-2015-day-1-introduction-and-stack/)_
 
+## Encontro HaskellBR São Paulo
+[Vamos nos encontrar em São Paulo em 25 de Janeiro de 2016. Marque sua presença
+e comente se não puder vir.](http://www.meetup.com/haskellbr-sp/events/227526368/)
+
 ## Índice de toda a série
 O índice de toda a série está no topo do artigo para o [dia 1](/2015/12/08/aperitivos-de-haskell-24-dias-de-hackage-2015-dia-1-introducao-e-stack.html).
 
