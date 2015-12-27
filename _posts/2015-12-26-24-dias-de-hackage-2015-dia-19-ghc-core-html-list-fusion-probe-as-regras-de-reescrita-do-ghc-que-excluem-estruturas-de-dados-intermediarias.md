@@ -100,10 +100,10 @@ podemos usar um tipo de dados _"stream"_, ou mais radicalmente,
 comprimir a computação da estrutura de dados resultante em uma única
 percorrida, sem alocações ou dados intermediários.
 
-O ecossistema do Haskell contém muitas bibliotecas para realizar esses tipos de
+O ecossistema do Haskell contém muitas funções para realizar esses tipos de
 otimizações, como o
 [`foldl`](http://hackage.haskell.org/package/foldl),
-mas eles estão fora do escopo desse artigo. Ao invés disso, para exemplos
+mas elas estão fora do escopo desse artigo. Ao invés disso, para exemplos
 simples como o acima, o GHC já *automaticamente* aplica fusão, por meio de
 [regras de reescrita](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/rewrite-rules.html)
 especiais, inclusas nas bibliotecas padrão.
