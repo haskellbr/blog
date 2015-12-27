@@ -90,7 +90,7 @@ spec =
       in list4 `shouldBe` [15, 18]
 {% endhighlight %}
 
-Em uma implementação típca de uma linguagem de programação típica, código que
+Em uma implementação típica de uma linguagem de programação típica, código que
 parece com esse vai resultar em *alocar* e *criar* quatro listas (ou arrays, ou
 qualquer que seja o tipo para coleções idiomático e desejado), um depois do
 outro, e percorrendo três listas usando um _filter_ e dois _maps_. Para fazer
