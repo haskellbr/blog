@@ -22,7 +22,7 @@ O índice de toda a série está no topo do artigo para o [dia 1](http://conscie
 
 ([Discussão no reddit](https://www.reddit.com/r/haskell/comments/3xie9b/24_days_of_hackage_2015_day_19_ghccorehtml/))
 
-A *funcionalidade mais legal* de usar Haskell, para mim, há de ser o
+A *funcionalidade mais legal* de usar Haskell, para mim, é o
 [_fusion_](https://wiki.haskell.org/GHC_optimisations#Fusion). O compilador GHC
 realiza essa otimização memorável, que pode apagar estruturas intermediárias
 inteiras inteiras da existência.
