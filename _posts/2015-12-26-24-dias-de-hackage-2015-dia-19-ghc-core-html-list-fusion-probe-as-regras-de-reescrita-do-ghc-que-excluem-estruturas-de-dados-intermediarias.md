@@ -113,9 +113,6 @@ Podemos escrever pipeslines de muitas formas diferentes. Aqui está uma forma
 estilo _OO_ usando `&` (aplicação reversa de funções) e `>>>` (composição da
 esquerda para a direita):
 
-We can write the pipeline in many different ways. Here's an OO-style
-way using `&` (reverse function application) and `>>>` (left-to-right composition):
-
 {% highlight haskell %}
     it "runs a chain of maps, filters (OO-style)" $
       let list4 = ["Hello", "my", "world!"] &
