@@ -32,7 +32,7 @@ usei o `newtype` como uma forma de indicar *a intenção* de que eu queria
 restringir os valores legais para um tipo, como
 [no dia 15](/2015/12/23/24-dias-de-hackage-2015-dia-15-iospec-testando-io-e-algumas-dicas-para-o-quickcheck.html)
 quando eu laboriosamente tentei *refinar* tipos existentes sem nenhuma prova
-automaticamente checável de que estavo os populando corretamente.
+automaticamente checável de que estava os populando corretamente.
 
 <!-- more -->
 
