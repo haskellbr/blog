@@ -11,7 +11,7 @@ Site Jekyll por trás de [blog.haskellbr.com](http://blog.haskellbr.com).
 
 _NOTA:_ Vale a pena discutir o que vai escrever antes de começar. Veja se não
 há ninguém online no [IRC](http://irc.lc/freenode/haskell-br) ou no
-[Slack](http://haskellbr.com/slack/).
+[Slack](http://slack.haskellbr.com/).
 
 ## Instalando as dependências
 Tendo `ruby` e `bundler` instalados:

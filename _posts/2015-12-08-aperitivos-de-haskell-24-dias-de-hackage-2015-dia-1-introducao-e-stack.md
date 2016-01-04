@@ -388,7 +388,7 @@ artigos traduzidos para a posterioridade. Quando o final de ano chegar, teremos
 24 artigos muito relevantes (obrigado Franklin!), em português.
 
 Se você quer ajudar com esse tipo de coisa, agora é a hora. Entre no
-[Slack](http://haskellbr.com/slack/) ou no
+[Slack](http://slack.haskellbr.com/) ou no
 [IRC](http://irc.lc/freenode/haskell-br) da [HaskellBR](http://haskellbr.com/) e
 contribua. Esse blog e outros projetos associados estão na
 [organização `haskellbr` no GitHub](https://github.com/haskellbr) e em
