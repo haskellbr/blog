@@ -41,7 +41,7 @@ de Haskell na vida real.
 * **Dia 21:** [`hood`, `GHood`, `Hoed`: Debugging orientado à observação no Haskell](/2015/12/29/24-dias-de-hackage-2015-dia-21-hood-ghood-hoed-debugging-orientado-a-observacao-no-haskell.html)
 * **Dia 22:** [`Shake`: O build system dinâmico](/2016/01/03/24-dias-de-hackage-2015-dia-22-shake-o-build-system-dinamico.html)
 * **Dia 23:** [Liquid Haskell: Refinamento de tipos no mundo real](/2016/01/04/24-dias-de-hackage-2015-dia-23-liquid-haskell-refinamento-de-tipos-no-mundo-real.html)
-* **Dia 24:** [Conclusão e agradecimentos](/2016/01/04/24-dias-de-hackage-2015-dia-24-conclus%C3%A3o-e-agradecimentos.html)
+* **Dia 24:** [Conclusão e agradecimentos](/2016/01/04/24-dias-de-hackage-2015-dia-24-conclusao-e-agradecimentos.html)
 
 - - -
 
