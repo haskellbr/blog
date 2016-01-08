@@ -27,50 +27,54 @@ e muito fácil. Cito esse texto porque acho que ele foi formador para mim e
 tem a ver com esse assunto.
 
 # Template Haskell
-Começarei com uma discussão sobre o **Template Haskell**. Ontem, no [dia 9 da
-série 24 dias de Hackage](/2015/12/16/24-dias-de-hackage-2015-dia-9-pontos-interessantes-do-template-haskell.html),
-Franklin Chen apontou levemente sobre o **Template Haskell** e como pode
+Começarei com uma discussão sobre o **Template Haskell**. No
+[dia 9 da série 24 dias de Hackage](/2015/12/16/24-dias-de-hackage-2015-dia-9-pontos-interessantes-do-template-haskell.html),
+Franklin Chen comentou levemente sobre o **Template Haskell** e como pode
 melhorar seu código. Vamos descontruir o que é **Template Haskell**.
 
 Como linkado no dia 9, há um
 [dia de hackage de 2014 sobre Template Haskell](https://ocharles.org.uk/blog/guest-posts/2014-12-22-template-haskell.html).
 Darei minhas próprias observações sobre a extensão.
 
-## `{-# LANGUAGE TemplateHaskell #-}`
-Haskell é uma linguagem estática. Assim, se eu tiver um arquivo `Main.hs` e
-escrever:
+## {-# LANGUAGE TemplateHaskell #-}
+Haskell é uma linguagem estática sem expressões no top-level que não sejam
+declarações. Assim, se eu tiver um arquivo `Main.hs` e escrever:
+
 {% highlight haskell %}
 putStrLn "Hello World"
 {% endhighlight %}
 
 Vou ter um erro de compilação, ao contrário de uma linguagem como Python ou
 JavaScript, onde posso escrever:
+
 {% highlight python %}
 print "Hello World"
 {% endhighlight %}
 
 E ver mágica na tela.
 
+- - -
+
 Ao adicionar `{-# LANGUAGE TemplateHaskell #-}` ao topo de um arquivo `.hs`,
-ativamos a extensão. Isso causa uma mudança no comportamento da
-linguagem. Agora, podemos ter expressões no _top-level_, desde que retornem
-representações de código.
+ativamos a extensão. Há mudança no comportamento da linguagem. Com ela, podemos
+ter expressões no _top-level_, desde que retornem representações de código.
 
 O que isso quer dizer? Se em **Python** eu posso digitar `print "Hello World"`
 e ver `"Hello World"` na tela, em **Haskell** com **TemplateHaskell**, posso
 digitar `funcaoQueRetornaCodigo` e ter o código gerado por essa função incluso
 no meu módulo.
 
-Além disso, adiciona a ideia de "splices" ao Haskell. Dada uma `retornaCodigo` que
-retorna código e cabe em algum lugar, podemos escrever `$(retornaCodigo)` onde
-gostariámos que o código gerado fosse incluso e as coisas funcionariam como se
-espera.
+Além disso, adiciona a ideia de _"splices"_ ao Haskell. Dada uma
+`funcaoQueRetornaCodigo` que retorna código e cabe em algum lugar, podemos
+escrever `$(funcaoQueRetornaCodigo)` onde gostariámos que o código gerado fosse
+incluso e as coisas funcionariam como se espera.
 
-`retornaCodigo` pode usar qualquer parte ou módulo já escrito em Haskell, desde
-que não use código definido no mesmo módulo em que está sendo incluso. Isso
-quer dizer que, se temos código que faz parsing de Markdown para uma estrutura
-de dados em Haskell, podemos escrever `$(parseMarkdown "markdown")` e esperar
-que a estrutura esteja definida nesse ponto como um literal.
+`funcaoQueRetornaCodigo` pode usar qualquer parte ou módulo já escrito em
+Haskell, desde que não use código definido no mesmo módulo em que está sendo
+incluso. Isso quer dizer que, se temos código que faz parsing de Markdown para
+uma estrutura de dados em Haskell, podemos escrever `$(parseMarkdown
+"markdown")` e esperar que a estrutura esteja definida nesse ponto como um
+literal.
 
 ## O que diabos é "código" ou "representações de código" aqui?
 Quando falo em "código" ou "representações de código" quero dizer a _AST_: a
@@ -103,11 +107,10 @@ dados que representa o código apropriado para o contexto onde é incluso e `Q` 
 um `Monad` que nos deixa facilmente:
 
 - Gerar nomes únicos que não conflitem com nomes já definidos
-- Encontrar os nomes que a que strings se referem (afinal o nome de uma função
-  ou declaração de tipo não é uma string; mas sim um `Name`)
+- Encontrar os nomes aos quais strings se referem
 - Manejar estado
-- Fazer `IO` (!!) - podemos ler um arquivo ou baixar documentação da web para
-  gerar código
+- Fazer `IO` (podemos ler um arquivo ou baixar documentação da web para gerar
+  código)
 
 ## Derivando instâncias tipo `Show` com `TemplateHaskell`
 Vamos para um primeiro exemplo prático. Queremos gerar instâncias de uma
@@ -148,8 +151,6 @@ a classe `ShowType` e `[Type]` são os parâmetros de tipo; no nosso caso
 {% highlight haskell %}
 deriveShowType :: Name -> Q [Dec]
 {% endhighlight %}
-
-
 
 ## QuasiQuotes
 
