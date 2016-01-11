@@ -137,7 +137,7 @@ Verá:
 Answer: 9
 {% endhighlight %}
 
-Claro que eu escolhi esse exemplo, porque ele mostra o que quero dizer com
+Claro que escolhi esse exemplo porque ele mostra o que quero dizer com
 _estupidamente_. Aqui não estamos protegendo as expressões com parênteses,
 então, se escrevermos:
 
@@ -309,17 +309,36 @@ ghci> :t 'MeuTipo
 'MeuTipo :: Name
 {% endhighlight %}
 
+Da mesma forma também adiciona a sintaxe `''Coisa` que transforma um **tipo**
+em seu `Name`.
+
+{% highlight console %}
+ghci> :t ''MeuTipo
+'MeuTipo :: Name
+{% endhighlight %}
+
+`'MeuTipo` é o `Name` do construtor `MeuTipo` e `''MeuTipo` é o `Name` do tipo
+`MeuTipo`.
+
+- - -
+
 Vamos usar a função `showName` do módulo `Language.Haskell.TH.Syntax`, que
 define as estruturas que representam código linkadas acima, entre outras. Essa
 função tem tipo `Name -> String`. Também vamos usar o construtor do tipo `Dec`
 `InstanceD Cxt Type [Dec]` usado para definir instâncias de
 _type-classes_. Nesse construtor, `Cxt` é a _type-class_; usamos seu construtor
 `ClassP Name [Type]`, onde `Name` é o identificador para a classe `ShowType` e
-`[Type]` são os parâmetros de tipo; no nosso caso
+`[Type]` são os parâmetros de tipo; no nosso caso:
 
 {% highlight haskell %}
 deriveShowType :: Name -> Q [Dec]
 {% endhighlight %}
+
+{% highlight haskell %}
+deriveShowType name = return [ InstanceD undefined undefined undefined
+                             ]
+{% endhighlight %}
+
 
 ## QuasiQuotes
 
