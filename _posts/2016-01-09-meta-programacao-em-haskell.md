@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Como Haskell usa meta-programação para avançar de forma independente"
+title: "Meta-programação em Haskell - Parte 1 - C, LISP, Template Haskell e QuasiQuotes"
 author: Pedro Tacla Yamada
 author_url: "https://github.com/yamadapc"
 ---
@@ -8,9 +8,11 @@ Algumas linguagens mudam do dia para noite, quebrando uma quantidade enorme de
 código que estava em produção. Outras demoram anos para avançar. Há uma formas
 melhores da comunidade introduzir mudanças organicamente; um sistema de macros
 sendo uma forma popular. Gostaria de discutir o quê o Haskell traz para essa
-frente, propostas que para mim são novas e inusitadas. Em seguida, tentarei
-mostrar um exemplo de meta-programação que soluciona um problema sério na
-linguagem e como sua criação impulsionou mudanças no compilador.
+frente, propostas que para mim são novas e inusitadas.
+
+Em um segundo post, tentarei mostrar um exemplo de meta-programação que
+soluciona um problema sério na linguagem e como sua criação impulsionou
+mudanças no compilador.
 
 <!-- more -->
 
@@ -27,9 +29,9 @@ e muito acessível.
 
 Em _"Growing a Language"_, Guy Steele discute a ideia de que "linguagem" não se
 trata somente de prover formas de expressão, mas também de prover possibilitar
-a criação de novas formas de expressão. Uma boa língua deve ser capaz de ser
-extendida, construtos devem ser capazes de serem compostos de forma a criar
-novos contrutos, novos sentidos e novas formas de composição.
+a criação de novas formas de expressão. Uma boa linguagem deve ser capaz de ser
+extendida, estruturas devem ser capazes de serem compostos de forma a criar
+novos estruturas, novos sentidos e novas formas de composição.
 
 # Template Haskell
 Começarei com uma discussão sobre o **Template Haskell**. No
@@ -39,25 +41,9 @@ melhorar seu código. E o que é **Template Haskell**?
 
 Como linkado no dia 9, há um
 [dia de hackage de 2014 sobre Template Haskell por Oliver Charles](https://ocharles.org.uk/blog/guest-posts/2014-12-22-template-haskell.html).
-Ferei meus próprios comentários sobre a extensão.
+Farei meus próprios comentários sobre a extensão.
 
 ## {-# LANGUAGE TemplateHaskell #-}
-Haskell é uma linguagem estática sem expressões no top-level que não sejam
-declarações. Assim, se eu tiver um arquivo `Main.hs` e escrever:
-
-{% highlight haskell %}
-putStrLn "Hello World"
-{% endhighlight %}
-
-Vou ter um erro de compilação, ao contrário de uma linguagem como Python ou
-JavaScript, onde posso escrever:
-
-{% highlight python %}
-print "Hello World"
-{% endhighlight %}
-
-E ver mágica na tela.
-
 Entre outros elementos da sintaxe, podemos dizer que a linguagem basicamente se
 separa em:
 
@@ -260,9 +246,9 @@ declaração, podemos escrever `$(parseMarkdown "markdown")` e esperar que a
 estrutura esteja definida nesse ponto.
 
 ## O que é Q?
-`retornaCodigo` tem tipo `Q algumaCoisa` onde `algumaCoisa` é uma das
-estruturas de dados para código (`Pat`, `Exp`, `Lit`, `[Dec]` etc.). `Q` é um
-`Monad` que nos deixa facilmente:
+`retornaCodigo` tem tipo `Q algumaCoisa`, onde `algumaCoisa` é uma das
+estruturas de dados para código (`Pat`, `Exp`, `[Dec]` etc.). `Q` é um `Monad`
+que nos deixa facilmente:
 
 - Gerar nomes únicos que não conflitem com nomes já definidos
 - Encontrar os identificadores para a estrutura a qual strings se referem
@@ -271,10 +257,71 @@ estruturas de dados para código (`Pat`, `Exp`, `Lit`, `[Dec]` etc.). `Q` é um
   código; isso é inseguro, porque pode fazer a compilação não ser
   determinística, mas é legal que seja possível e tem muitos usos práticos)
 
-## Derivando Show com Template Haskell
-Um exemplo prático de **Template Haskell**. Queremos gerar instâncias de uma
-_type-class_ `ShowType` ilustrativa, que é definida como:
+## QuasiQuotes Take 1: Explorando a AST do Haskell
+Há uma última coisa que o **Template Haskell** adiciona à linguagem. são as
+**QuasiQuotes**. Adiciona a sintaxe `[quoter| conteúdo |]` onde `quoter` recebe
+uma `String` e retorna um `Q` de alguma das estruturas de dados para o
+código. Vamos entrar mais profundamente nisso, mas agora, sugiro que você abra
+uma sessão do GHCi e brinque com os **QuasiQuoters** que são importados por
+padrão ao se ativar a extensão.
 
+Primeiro inicializamos o `ghci` e ativamos a extensão:
+{% highlight console %}
+ghci> :set -XTemplateHaskell
+{% endhighlight %}
+
+Imediatamente podemos ver o tipo de uma **QuasiQuotation**:
+{% highlight console %}
+ghci> :t [| 10 + 20 |]
+[| 10 + 20 |] :: Language.Haskell.TH.ExpQ
+{% endhighlight %}
+
+Vamos importar o módulo `Language.Haskell.TH` para entender o que é `ExpQ`:
+{% highlight console %}
+ghci> import Language.Haskell.TH
+ghci> :info ExpQ
+type ExpQ = Q Exp       -- Defined in ‘Language.Haskell.TH.Lib’
+{% endhighlight %}
+
+Para inspecionar o `Exp` contido nesse `Q`, vamos usar a função `runQ`, cuja
+assinatura pode ser simplificada para:
+{% highlight haskell %}
+runQ :: IO => Q a -> IO a
+{% endhighlight %}
+
+Então:
+{% highlight console %}
+ghci> runQ ([e| 10 + 20 |])
+InfixE (Just (LitE (IntegerL 10))) (VarE GHC.Num.+) (Just (LitE (IntegerL 20)))
+ghci> runQ ([d| data List = List String |])
+[DataD [] List_0 [] [NormalC List_1 [(NotStrict,ConT GHC.Base.String)]] []]
+{% endhighlight %}
+
+Temos os `QuasiQuoters` built-in:
+
+- `e` para expressões
+- `d` para declarações
+- `p` para patterns
+- `t` para tipos
+
+Quando chamamos `[| 10 + 20 |]` o quasi quoter, em tempo de compilação:
+
+- Recebe `10 + 20` como uma `String`
+- _Parseia_ `"10 + 20"` como uma expressão de **Haskell**
+- Retorna um `Exp`
+
+Estou mostrando isso porque ainda que no **Template Haskell** nós não tenhamos
+a vantagem que se tem no **LISP** de uma árvore de sintaxe abstrata
+extremamente simples e direta, temos essa capacidade de interativamente
+inspecionar estruturas.
+
+- - -
+
+## Derivando Show com Template Haskell
+Um exemplo prático de **Template Haskell**.
+
+Queremos gerar instâncias de uma _type-class_ `ShowType` ilustrativa, que é
+definida como:
 {% highlight haskell %}
 class ShowType a where
     showType :: a -> String
@@ -323,25 +370,111 @@ ghci> :t ''MeuTipo
 - - -
 
 Vamos usar a função `showName` do módulo `Language.Haskell.TH.Syntax`, que
-define as estruturas que representam código linkadas acima, entre outras. Essa
-função tem tipo `Name -> String`. Também vamos usar o construtor do tipo `Dec`
-`InstanceD Cxt Type [Dec]` usado para definir instâncias de
-_type-classes_. Nesse construtor, `Cxt` é a _type-class_; usamos seu construtor
-`ClassP Name [Type]`, onde `Name` é o identificador para a classe `ShowType` e
-`[Type]` são os parâmetros de tipo; no nosso caso:
+define as estruturas que representam código linkadas acima. Essa função tem
+tipo `Name -> String`.
 
-{% highlight haskell %}
-deriveShowType :: Name -> Q [Dec]
+Se escrevermos o que temos até agora no `ghci`:
+{% highlight console %}
+ghci> class ShowType a where showType :: a -> String
+ghci> data MeuTipo = MeuTipo
 {% endhighlight %}
 
+Podemos dar uma olhada na estrutura para a instância que gostaríamos de gerar:
+{% highlight console %}
+ghci> runQ [d| instance ShowType MeuTipo where showType _ = "MeuTipo" |]
+{% endhighlight %}
+
+Com highlighting para ser mais fácil de enxergar:
+{% highlight Haskell %}
+[ InstanceD []
+  (AppT (ConT ShowType) (ConT MeuTipo))
+  [ FunD showType [ Clause [ WildP ]
+                    -- Nosso gerador só precisa mudar essa parte
+                    (NormalB (LitE (StringL "MeuTipo")))
+                    []
+                  ]
+  ]
+]
+{% endhighlight %}
+
+Então agora poderia escrever:
 {% highlight haskell %}
-deriveShowType name = return [ InstanceD undefined undefined undefined
+deriveShowType :: Name -> Q [Dec]
+deriveShowType name = return [ InstanceD []
+                               (AppT (ConT ''MyShow) (ConT name))
+                               [ FunD 'myShow [ Clause [ WildP ]
+                                                (NormalB (LitE
+                                                          (StringL
+                                                           (nameBase name))))
+                                                []
+                                              ]
+                               ]
                              ]
 {% endhighlight %}
 
+### Usando o gerador
+Podemos usar o gerador por meio dos splices:
+{% highlight haskell %}
+{-# LANGUAGE TemplateHaskell #-}
+module Main where
 
-## QuasiQuotes
+-- O Template Haskell não nos deixa usar splices com funções definidas no
+-- módulo atual então botamos tudo escrito até agora em um módulo `TH`
+import TH
 
-## records
+data MyType = MyType
 
+deriveShowType ''MyType
 
+main :: IO ()
+main = print (myShow MyType)
+{% endhighlight %}
+
+### Refatorando com pattern-matching
+Com pattern matching, poderíamos usar os próprios `QuasiQuotes` para a ajudar a
+gerar o código:
+{% highlight haskell %}
+deriveShowType name = do
+    -- Criamos a instância que queremos
+    ids <- [d| instance MyShow String where myShow _ = "Mock" |]
+
+    -- Desconstruímos a instância
+    let [InstanceD ctx (AppT showt (ConT _)) _] = ids
+        name' = nameBase name
+
+    -- Aqui há uma coisa importante, podemos acessar as variáveis em escopo
+    -- dentro do QuasiQuoter e elas serão interpoladas.
+    fds <- [d| myShow _ = name' |]
+
+    -- Reconstruímos a instância substituindo o "Mock"
+    return [InstanceD ctx (AppT showt (ConT name)) fds]
+{% endhighlight %}
+
+## QuasiQuotes Take 2: O que é um QuasiQuoter?
+Um `QuasiQuoter` não passa de um ADT definido como:
+{% highlight haskell %}
+data QuasiQuoter = QuasiQuoter { quoteExp  :: String -> Q Exp,
+                                 quotePat  :: String -> Q Pat,
+                                 quoteType :: String -> Q Type,
+                                 quoteDec  :: String -> Q [Dec] }
+{% endhighlight %}
+
+Assim para ter uma linguagem interpolada no Haskell basta definir essa
+estrutura. Sugiro dar uma olhada no
+[manual do GHC](https://downloads.haskell.org/~ghc/6.10.1/docs/html/users_guide/template-haskell.html#th-quasiquotation).
+[Um dos projetos da **HaskellBR** está usando um **QuasiQuoter** para ler a declaração de um ADT a partir de arquivos markdown e um header YAML-frontmatter](https://github.com/haskellbr/workhs/blob/75e906454b5c46981e1d4fe7a1571dc62880c2a8/src/Workhs.hs#L70-L99)
+
+(Ele usa o meu módulo [`frontmatter`](https://github.com/yamadapc/haskell-frontmatter))
+
+## O que vimos e todo o código
+Esse post tentou introduzir a meta-programação em **Haskell**. Em suma, gostaria de
+ter apresentado que:
+
+- Em **Haskell** a meta-programação em tempo de compilação se dá por meio da
+  manipulação da **AST**
+- Temos segurança de tipos ao gerar código
+- Podemos explorar a **AST** usando **QuasiQuoters**
+- Podemos definir novas estruturas de sintaxe usando **QuasiQuoters**
+
+No próximo post, vou me aprofundar nesse último ponto. Como essa capacidade é
+um diferencial para uma comunidade de programação.
