@@ -476,5 +476,7 @@ ter apresentado que:
 - Podemos explorar a **AST** usando **QuasiQuoters**
 - Podemos definir novas estruturas de sintaxe usando **QuasiQuoters**
 
-No próximo post, vou me aprofundar nesse último ponto. Como essa capacidade é
-um diferencial para uma comunidade de programação.
+[Todo o código está disponível no novo repositório `haskellbr/blog-code` no GitHub](https://github.com/haskellbr/blog-code)
+
+No próximo post, vou me aprofundar nesse último ponto e como é um diferencial
+para a comunidade.
