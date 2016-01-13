@@ -369,10 +369,6 @@ ghci> :t ''MeuTipo
 
 - - -
 
-Vamos usar a função `showName` do módulo `Language.Haskell.TH.Syntax`, que
-define as estruturas que representam código linkadas acima. Essa função tem
-tipo `Name -> String`.
-
 Se escrevermos o que temos até agora no `ghci`:
 {% highlight console %}
 ghci> class ShowType a where showType :: a -> String
@@ -397,7 +393,12 @@ Com highlighting para ser mais fácil de enxergar:
 ]
 {% endhighlight %}
 
-Então agora poderia escrever:
+Vamos usar a função `nameBase` do módulo `Language.Haskell.TH.Syntax`, que
+define as estruturas que representam código linkadas acima. Essa função tem
+tipo `Name -> String`.
+
+Agora é só escrever:
+
 {% highlight haskell %}
 deriveShowType :: Name -> Q [Dec]
 deriveShowType name = return [ InstanceD []
