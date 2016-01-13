@@ -16,13 +16,17 @@ mudanças no compilador.
 
 <!-- more -->
 
+- - -
+
 Não tenho como recomendar o suficiente o
 [paper/talk de Guy Steele _"Growing a Language"_](https://www.cs.virginia.edu/~evans/cs655/readings/steele.pdf),
 no qual discute como a extensibilidade por meio da composição de primitivas
-básicas é um conceito fundamental em linguagens e o quão bem sucedidas
-serão. Não, não se refere somente à linguagens de programação, ainda que esse
-seja seu propósito prático. Se nunca seu esse texto, adicione ele para sua
-lista de leituras! Eu o guardo com muito carinho porque foi o primeiro
+básicas é um conceito fundamental em linguagens e no quão bem sucedidas
+serão. Não se refere somente à linguagens de programação, ainda que esse seja
+seu propósito prático.
+
+Se nunca seu esse texto, adicione ele para sua lista de leituras! Eu o guardo
+com muito carinho porque foi o primeiro
 ["Paper of the Week"](https://www.recurse.com/blog/41-introducing-paper-of-the-week)
 enquanto estava na _Hacker School_/_Recurse Center_ e é uma leitura sensacional
 e muito acessível.
