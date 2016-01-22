@@ -1,4 +1,7 @@
 # blog.haskellbr.com
+[![Issue Stats](http://issuestats.com/github/haskellbr/blog/badge/pr?style=flat)](http://issuestats.com/github/haskellbr/blog)
+[![Issue Stats](http://issuestats.com/github/haskellbr/blog/badge/issue)](http://issuestats.com/github/haskellbr/blog)
+- - -
 Site Jekyll por trás de [blog.haskellbr.com](http://blog.haskellbr.com).
 
 ## Enviando seu post
