@@ -1687,22 +1687,3 @@ input + button {
 .after-signup {
   display: none;
 }
-
-.top-announcement {
-  background-color: #FDFF85;
-  padding: 13px;
-}
-
-@media (max-width: 1700px) {
-  .social-top-buttons {
-    display: none;
-  }
-
-  #blog_badge {
-    display: none;
-  }
-}
-
-.top-announcement strong {
-  font-weight: bold;
-}
