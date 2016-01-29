@@ -29,7 +29,7 @@ O vídeo já está disponível:
 {% include youtubePlayer.html id="mmT5GypZxc8?list=PLwFikDFC8Ejw6OULSoDWza-vTecCWbNhS" %}
 
 
-Na sequência, [Pedro Yamada]("https://twitter.com/yamadapc/") apresentou sobre Paralelismo e Concorrência em Haskell, 
+Na sequência, [Pedro Yamada]("https://twitter.com/yamadapc/") apresentou sobre [Paralelismo e Concorrência em Haskell](https://github.com/haskellbr/meetups/tree/master/01-2016/concorrencia-em-haskell),
 abordando um crash course sobre como o GHC realiza a avaliação de expressões e como lida com estratégias de paralelismo
 e de concorrência. Foi também discutida, de forma prática e com exemplos, as diferenças entre os dois conceitos.
 Além disso, o palestrante discutiu os conceitos que embasam as MVars e por último falou-se de STM.
