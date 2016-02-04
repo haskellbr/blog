@@ -14,12 +14,12 @@ ministradas por Daniel Yokomizo, Pedro Yamada e Eric Andrade.
 - - -
 
 Apesar de um contratempo inicial (originalmente o meetup seria realizado no
-[Garoa hacker Clube]("https://garoa.net.br/"), mas devido ao grande
+[Garoa hacker Clube](https://garoa.net.br/), mas devido ao grande
 número de inscritos precisamos alterar o local para o escritório da Amazon 
 já bem próximo ao dia 25/01), o encontro de Janeiro foi um sucesso e tivemos cerca
 de trinta pessoas presentes, mesmo sendo feriado na capital paulista.
 
-A primeira apresentação foi ministrada pelo [Daniel Yokomizo]("https://twitter.com/dyokomizo"),
+A primeira apresentação foi ministrada pelo [Daniel Yokomizo](https://twitter.com/dyokomizo),
 trazendo o tema de [Monadic Parser Combinators](http://dyokomizo.github.io/talks/2016-01-25%20-%20Haskell-SP%20-%20Combinadores%20Mon%C3%A1dicos%20de%20An%C3%A1lise%20Sint%C3%A1tica/index.html), 
 cujo título foi traduzido pelo autor para "Combinadores Monádicos de Análise Sintática".
 Na palestra foram explorados os conceitos de Análise Sintática, possíveis pontos de falhas,
@@ -29,7 +29,7 @@ O vídeo já está disponível:
 {% include youtubePlayer.html id="mmT5GypZxc8?list=PLwFikDFC8Ejw6OULSoDWza-vTecCWbNhS" %}
 
 
-Na sequência, [Pedro Yamada]("https://twitter.com/yamadapc/") apresentou sobre [Paralelismo e Concorrência em Haskell](https://github.com/haskellbr/meetups/tree/master/01-2016/concorrencia-em-haskell),
+Na sequência, [Pedro Yamada](https://twitter.com/yamadapc/) apresentou sobre [Paralelismo e Concorrência em Haskell](https://github.com/haskellbr/meetups/tree/master/01-2016/concorrencia-em-haskell),
 abordando um crash course sobre como o GHC realiza a avaliação de expressões e como lida com estratégias de paralelismo
 e de concorrência. Foi também discutida, de forma prática e com exemplos, as diferenças entre os dois conceitos.
 Além disso, o palestrante discutiu os conceitos que embasam as MVars e por último falou-se de STM.
@@ -37,8 +37,8 @@ Veja o vídeo:
 
 {% include youtubePlayer.html id="svZefWRSlMQ?list=PLwFikDFC8Ejw6OULSoDWza-vTecCWbNhS" %}
 
-Encerrando o encontro, [Eric Andrade]("https://twitter.com/ericshortcut") apresentou sua palestra sobre
-[Yesod]("https://github.com/ericshortcut/SlideYesod/tree/master/apresentacao"), introduzindo rapidamente
+Encerrando o encontro, [Eric Andrade](https://twitter.com/ericshortcut) apresentou sua palestra sobre
+[Yesod](https://github.com/ericshortcut/SlideYesod/tree/master/apresentacao), introduzindo rapidamente
 a história do framework, suas vantagens, seguido por alguns exemplos de código, apresentando como declarar
 rotas, manejar requests HTTP e como montar respostas. Por último, Eric mostrou um pouco sobre templates com 
 Shakespeare.
@@ -47,11 +47,11 @@ Assista o vídeo:
 {% include youtubePlayer.html id="IMKFld1Hsm8?list=PLwFikDFC8Ejw6OULSoDWza-vTecCWbNhS" %}
 
 Não podemos deixar de mencionar também um enorme agradecimento à __Amazon Brasil__ pelo espaço, coffee-break e disponibilidade em
-meio a um feriado prolongado. [Julio Faerman]("https://twitter.com/jmfaerman") e equipe, o HaskellBR deixa aqui um sincero
+meio a um feriado prolongado. [Julio Faerman](https://twitter.com/jmfaerman) e equipe, o HaskellBR deixa aqui um sincero
 muito obrigado!
 
 Agradecemos também a todos os participantes, palestrantes e colaboradores da organização do meetup. Acesse 
-[a página do meetup do HaskellBR]("http://www.meetup.com/haskellbr-sp/") e receba notificações para os 
+[a página do meetup do HaskellBR](http://www.meetup.com/haskellbr-sp/) e receba notificações para os 
 próximos encontros.
 
 - - -
