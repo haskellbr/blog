@@ -15,12 +15,9 @@
 
 
   {% comment %} Styles n Scripts {% endcomment %}
-
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic|Open+Sans:400italic,700italic,700,400">
-  <link href='//fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic|Ubuntu+Mono:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
-  <style>
-   {% include screen.css %}
-  </style>
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic|Ubuntu+Mono:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ "/css/screen.css" | prepend: site.baseurl }}">
 
   {% comment %} Additional header setup from Jekyll {% endcomment %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
