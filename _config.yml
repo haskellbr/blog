@@ -1,17 +1,17 @@
 # Site settings
 title: "HaskellBR Blog"
-logo: logo.png # image from https://www.flickr.com/photos/lwr/5496279831/in/set-72157594159055823
+logo: logo.png
 email: tacla.yamada@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
+description: >
   O Blog da HaskellBR é um blog sobre Haskell e programação funcional em
   português. É aberto para contribuições sobre essa linguagem de programação e
   outros tópicos a sua volta como compiladores, desenvolvimento web e
   Open-Source.
-url: "http://blog.haskellbr.com" # the base hostname & protocol for your site
-#baseurl: /blog # the subpath of your site, e.g. /blog/
-# twitter_username: haskellbr
+url: "http://blog.haskellbr.com"
+twitter_username: haskellbr2
 github_username:  haskellbr
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 excerpt_separator: "<!-- more -->"
