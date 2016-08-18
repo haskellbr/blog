@@ -11,6 +11,16 @@ um parser, pretty-printer, linter e EDSL para escrever **Dockerfiles** em
 chegar no futuro. Fica para um outro post discutir sua implementação usando
 **Monads** livres.
 
+- - -
+
+**Dia 27/09/2016**, teremos o **8º Encontro de Haskellers de São Paulo** na
+Amazon. Reserve sua vaga no
+[Meetup.com](http://www.meetup.com/haskellbr-sp/events/233395066/) e envie sua
+palestra e/ou ideia para
+[https://goo.gl/forms/5Xh3VbziQld29pFw1](https://goo.gl/forms/5Xh3VbziQld29pFw1).
+
+- - -
+
 Minha agenda será:
 
 - Apresentar e problematizar dois exemplos de fricção entre o óbvio e as
