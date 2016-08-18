@@ -140,8 +140,11 @@ RUN cabal install
 CMD myapp
 {% endhighlight %}
 
-Aqui usamos a mesma imagem para compilar o projeto e executar o binário gerado.
-Apesar de simples, essa estratégia é lenta e custosa e não é recomendada.
+Nesse exemplo, poderíamos usar a mesma imagem para compilar o projeto e executar
+o binário gerado. Apesar de simples, essa estratégia é lenta e custosa e não é
+recomendada, porque podemos gerar imagens muito menores só incluindo os
+resultados da compilação e suas dependencias, sem ferramentas como o `ghc`,
+`cabal`, `stack` etc.
 
 Idealmente gostaríamos de ter duas imagens:
 
