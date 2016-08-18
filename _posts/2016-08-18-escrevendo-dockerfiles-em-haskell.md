@@ -442,7 +442,7 @@ Usando **toDockerfileStrIO**, nós executamos a EDSL no tipo **IO** do
 Um framework em um nível mais alto, poderia restringir o tipo de ação acessível
 para um gerador de imagens.
 
-## Controlando o Docker a partir do Haskell (Scriptting)
+## Controlando o Docker a partir do Haskell (scripting)
 Também podemos facilmente escrever helpers como:
 {% highlight haskell %}
 import           Crypto.Hash                         (hash, MD5)
