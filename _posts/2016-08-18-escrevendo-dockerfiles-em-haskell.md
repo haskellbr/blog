@@ -256,10 +256,11 @@ TAG app:latest
 {% endhighlight %}
 
 Ainda assim, não podemos modularizar as instruções de compilação ou construção
-do container de runtime. Tal conhecimento deve ser codificado de novo e de
-novo. Apesar de que a biblioteca de templates do `Go` é exposta em alguma
-medida para o formato, isso não é o suficiente, ao meu ver, para criar
-abstrações fáceis de manter e compartilhar.
+do container de runtime. Tal conhecimento deve ser codificado de novo e de novo.
+
+Apesar de que a biblioteca de templates do `Go` é exposta em alguma medida,
+isso não é o suficiente, ao meu ver, para criar abstrações fáceis de manter e
+compartilhar.
 
 ### Uma EDSL em OCaml
 Ele menciona o [`ocaml-dockerfile`](https://github.com/avsm/ocaml-dockerfile),
