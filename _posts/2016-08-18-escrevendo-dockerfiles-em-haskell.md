@@ -202,7 +202,7 @@ isolado e só pode ser re-utilizado se copiado de um lugar para o outro.
 
 - - -
 
-## Em suma
+## Os problemas em suma
 Nesses dois exemplos encontramos dois problemas com o uso isolado de
 **Dockerfiles**:
 
