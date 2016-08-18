@@ -480,17 +480,16 @@ imagem (se ainda não existir) e a executar.
 
 
 ## Indo mais longe
-Até onde eu sei, o
+Até onde sei, o
 [`language-dockerfile`](http://hackage.haskell.org/package/language-dockerfile)
 é único nas estratégias de geração de Dockerfiles no sentido de que para
 **qualquer** bloco puro rodando no seu tipo interno `EInstructionM`, nós
-necessáriamente temos um `Dockerfile` equivalente, e podemos, como demonstrado,
-embedar instruções lidas de um `Dockerfile` normal, por meio de um _QuasiQuoter_
-em meio à EDSL usando **Haskell**.
+necessariamente temos um `Dockerfile` equivalente. Então, podemos, como
+demonstrado, embedar instruções lidas de um `Dockerfile` normal em meio a EDSL.
 
-Não seria impossível, portanto, transformar essa EDSL em um sistema de plugins
-ao invés de um sistema embedado em **Haskell** (apesar de que eu gosto de
-**Haskell** :) ).
+Não seria impossível, transformar essa EDSL em um sistema de plugins ao invés de
+um sistema embedado em **Haskell** (apesar de que gosto o suficiente de
+**Haskell**).
 
 No lugar de rejeitar diretivas inválidas de cara durante o parsing, ele poderia
 simplesmente as ler, para uma estrutura de dados como `UnknownInstruction {
