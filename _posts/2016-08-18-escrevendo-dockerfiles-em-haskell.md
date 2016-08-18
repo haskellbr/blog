@@ -311,6 +311,7 @@ ADD ./package.json /app/package.json
 WORKDIR /app
 RUN npm install
 ADD . /app
+CMD node .
   |]
 {% endhighlight %}
 
@@ -329,7 +330,7 @@ Nesse exemplo:
 
 - - -
 
-Podemos começar a quebrar essas 5 linhas em algo que seja genérico:
+Podemos começar a quebrar essas 6 linhas em algo que seja genérico:
 {% highlight haskell %}
 nodejsImage = do
     [edockerfile|
