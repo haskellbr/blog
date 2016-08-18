@@ -11,6 +11,8 @@ um parser, pretty-printer, linter e EDSL para escrever **Dockerfiles** em
 chegar no futuro. Fica para um outro post discutir sua implementação usando
 **Monads** livres.
 
+<!-- more -->
+
 - - -
 
 **Dia 27/09/2016**, teremos o **8º Encontro de Haskellers de São Paulo** na
