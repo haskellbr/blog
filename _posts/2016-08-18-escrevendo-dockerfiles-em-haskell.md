@@ -434,9 +434,10 @@ do tipo de efeito que pode ser feito na execução de blocos.
 
 Se **toDockerfileStr** é usado, o bloco que segue não pode ser mais do que um
 template; o sistema de tipos nos assegura que ele é um bloco puro e sempre se
-compartará da mesma forma independente do contexto em que for chamado. Usando
-**toDockerfileStrIO**, nós executamos a EDSL no tipo **IO** do **Haskell**, o que
-nos deixa executar ações arbitrárias.
+comportará da mesma forma independente do contexto em que for chamado.
+
+Usando **toDockerfileStrIO**, nós executamos a EDSL no tipo **IO** do
+**Haskell**, o que nos deixa executar ações arbitrárias.
 
 Um framework em um nível mais alto, poderia restringir o tipo de ação acessível
 para um gerador de imagens.
