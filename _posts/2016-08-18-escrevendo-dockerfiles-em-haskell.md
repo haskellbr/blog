@@ -86,6 +86,7 @@ ADD ./package.json /app/package.json
 WORKDIR /app
 RUN npm install
 ADD . /app
+CMD node .
 {% endhighlight %}
 
 Com isso, podemos encurtar o script para construir e rodar a imagem para:
