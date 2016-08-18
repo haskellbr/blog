@@ -113,7 +113,7 @@ cada serviço construído.
 
 Você poderia escrever scripts que compartilha entre **Dockerfiles**, mas isso se
 limita de algumas formas. Por exemplo, não há como escrever um script que
-encapsulem a ideia de que vou adicionar o manifesto das minhas dependencias,
+encapsule a ideia de que vou adicionar o manifesto das minhas dependencias,
 executar um comando e então adicionar meu projeto, já que um script não tem
 acesso às diretivas do Docker como `ADD`, `CMD` etc.
 
