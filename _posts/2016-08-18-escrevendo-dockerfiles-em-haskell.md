@@ -516,3 +516,11 @@ Todo o código está sendo distribuido sob a licença GPLv3 no GitHub em:
 E no Hackage em:
 
 [https://hackage.haskell.org/package/language-dockerfile](https://hackage.haskell.org/package/language-dockerfile)
+
+- - -
+
+**Dia 27/09/2016**, teremos o **8º Encontro de Haskellers de São Paulo** na
+Amazon. Reserve sua vaga no
+[Meetup.com](http://www.meetup.com/haskellbr-sp/events/233395066/) e envie sua
+palestra e/ou ideia para
+[https://goo.gl/forms/5Xh3VbziQld29pFw1](https://goo.gl/forms/5Xh3VbziQld29pFw1).
