@@ -380,8 +380,8 @@ main = writeFile "./Dockerfile" $ toDockerfileStr $
         run "apt-get install imagemagick"
 {% endhighlight %}
 
-Cabe notar que essas definições são publicáveis e modulares, assim como qualquer
-outro módulo escrito **Haskell**.
+Cabe notar que esse código é publicável e modular, assim como qualquer outro
+módulo escrito **Haskell**.
 
 ## Criando mais diretivas, dessa vez usando o sistema de arquivos no host
 Outro exemplo, seria criar um combinador `addGlob`; algo que falta em
