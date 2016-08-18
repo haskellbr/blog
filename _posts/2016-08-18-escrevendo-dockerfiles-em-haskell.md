@@ -184,10 +184,10 @@ EOF
 # ^ Um Template para criar a imagem com o binário que geramos
 {% endhighlight %}
 
-Apesar de que o fato do toolchain de Haskell não produzir binários completamente
-estáticos traz um pouco de complexidade, há algumas coisas das quais não
-conseguiríamos fugir mesmo em uma linguagem que de fato gerasse um único
-artefato executável independente.
+Apesar do fato de que o toolchain de Haskell não produz binários completamente
+estáticos, trazendo um pouco de complexidade, há algumas coisas das quais não
+conseguiríamos fugir mesmo em uma linguagem que gerasse um único artefato
+executável independente.
 
 Primeiro, precisamos de uma etapa de **construção do artefato** orquestrada com
 uma etapa de **construção da imagem**.
