@@ -196,10 +196,9 @@ Segundo, a definição da **construção imagem** depende da primeira etapa, ou,
 menos, precisa saber onde encontrar o binário e arquivos de suporte a serem
 entregues.
 
-De novo, a abstração de herança por meio imagens bases é insuficiente para
-chegar no resultado final de forma modular. O conhecimento codificado nesse
-script está isolado e só pode ser re-utilizado se copiado de um lugar para o
-outro.
+De novo, a abstração de herança por meio imagens base é insuficiente para chegar
+no resultado final de forma modular. O conhecimento codificado nesse script está
+isolado e só pode ser re-utilizado se copiado de um lugar para o outro.
 
 - - -
 
