@@ -211,9 +211,8 @@ Nesses dois exemplos encontramos dois problemas com o uso isolado de
 
 ## "The Dockerfile Explosion and the need for higher level tools"
 Antes de apresentar minha solução para essas questões, devo mencionar que
-comecei a pensar seriamente nesse problema depois de assistir a palestra _"The
-Dockerfile Explosion and the need for higher level tools"_ da **DockerCon
-2016**.
+comecei a pensar nesse problema depois de assistir a palestra _"The Dockerfile
+Explosion and the need for higher level tools"_ da **DockerCon 2016**.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IyuyA8rSBAo" frameborder="0" allowfullscreen></iframe>
 
