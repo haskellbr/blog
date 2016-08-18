@@ -102,9 +102,12 @@ Sem a parte `bash -c 'cd ...'` que deixa vazar essa informação para o
 Também poderíamos usar uma imagem menos pesada, como uma versão do **Node.js**
 rodando sobre a seca distribução do Linux **Alpine**.
 
+- - -
+
 Como nossa única forma de compartilhar lógica desses arquivos de geração de
-imagens é a herança a partir de uma imagem base, esse tipo de "melhor prática"
-deve ser lembrada de novo e de novo e codificada para cada serviço construído.
+imagens é a herança a partir de uma imagem base (a diretiva `FROM`), esse tipo
+de "melhor prática" deve ser lembrada de novo e de novo e re-codificada para
+cada serviço construído.
 
 Você poderia escrever scripts que compartilha entre **Dockerfiles**, mas isso se
 limita de algumas formas. Por exemplo, não há como escrever um script que
@@ -137,9 +140,11 @@ CMD myapp
 
 Aqui usamos a mesma imagem para compilar o projeto e executar o binário gerado.
 Apesar de simples, essa estratégia é lenta e custosa e não é recomendada.
-Idealmente o que gostaríamos é de ter duas imagens: uma imagem com todas as
-dependencias necessárias para gerar o binário que vamos entregar e outra apenas
-com as dependencias necessárias para executar esse binário.
+
+Idealmente gostaríamos de ter duas imagens:
+
+- Uma com todas as dependencias necessárias para gerar o binário que vamos entregar
+- Outra apenas com as dependencias necessárias para executar esse binário
 
 ### Scripts que geram Dockerfiles e Imagens
 Outra abordagem é a de ter um script gerando nossos artefatos e então suas
@@ -156,8 +161,10 @@ Podemos escrever um script como:
 stack docker pull
 stack build --docker
 # ^ Compila o projeto e todas suas dependencias em um container
+
 install_root=`stack path --local-install-root --docker`
 # ^ O path para o diretório contendo os arquivos gerados pelo build
+
 cat > Dockerfile <<EOF
 # Partimos de uma imagem muito pequena do Alpine Linux
 FROM alpine
@@ -169,6 +176,7 @@ ADD $install_root /app/
 # bibliotecas
 CMD LD_LIBRARY_PATH=/usr/local/lib:/lib /app/bin/myapp
 EOF
+# ^ Um Template para criar a imagem com o binário que geramos
 {% endhighlight %}
 
 Apesar de que o fato do toolchain de Haskell não produzir binários completamente
@@ -176,23 +184,26 @@ estáticos traz um pouco de complexidade, há algumas coisas das quais não
 conseguiríamos fugir mesmo em uma linguagem que de fato gerasse um único
 artefato executável independente.
 
-Primeiro, precisamos de uma etapa de construção do artefato orquestrada com uma
-etapa de construção da imagem. Segundo, a definição da construção imagem depende
-dessa primeira etapa, ou, ao menos, precisa saber onde encontrar o binário e
-arquivos de suporte a serem entregues.
+Primeiro, precisamos de uma etapa de **construção do artefato** orquestrada com
+uma etapa de **construção da imagem**.
 
-De novo, a abstração de imagens bases é insuficiente para chegar no resultado
-final. O conhecimento codificado nesse script está isolado e só pode ser
-re-utilizado se copiado de um lugar para o outro.
+Segundo, a definição da **construção imagem** depende da primeira etapa, ou, ao
+menos, precisa saber onde encontrar o binário e arquivos de suporte a serem
+entregues.
+
+De novo, a abstração de herança por meio imagens bases é insuficiente para
+chegar no resultado final de forma modular. O conhecimento codificado nesse
+script está isolado e só pode ser re-utilizado se copiado de um lugar para o
+outro.
 
 - - -
 
-## Os problemas em suma
+## Em suma
 Nesses dois exemplos encontramos dois problemas com o uso isolado de
 **Dockerfiles**:
 
-- Não podemos compartilhar nenhuma lógica de contrução de containers, senão
-  scripts
+- Não podemos compartilhar entre mais de uma **Dockerfile** nenhuma lógica de
+  contrução de containers, senão scripts
 - Não podemos expressar a ideia de imagens separadas para a compilação e
   produção
 
