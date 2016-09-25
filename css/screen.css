@@ -1687,3 +1687,37 @@ input + button {
 .after-signup {
   display: none;
 }
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.signup h2 {
+  font-weight: 800;
+  word-break: keep-all;
+  font-size: 35px;
+  line-height: 45px;
+  margin: 25px;
+}
+
+.signup .banner {
+  margin-bottom: 40px;
+}
+
+.signup .container {
+  margin-bottom: 40px;
+}
+
+#mc_embed_signup .mc-field-group {
+  display: inline-block;
+}
+
+#mc_embed_signup label {
+  display: none;
+}
+
+#mc_embed_signup input {
+  border-radius: 0;
+  display: inline-block;
+}
